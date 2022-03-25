@@ -1,0 +1,4020 @@
+<!DOCTYPE html>
+<html lang="gl">
+
+<head>
+    
+    <meta charset="utf-8">
+    
+    <!--Carga correcta para navegadores antiguos-->
+    <!--[if lt IE 9]>
+       <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="es" http-equiv="Content-Language">
+       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    
+    <title>Componentes</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="">
+
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+    
+    <!-- Chrome, Firefox OS y Opera -->
+    <meta name="theme-color" content="#2a2a2a">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2a2a2a">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2a2a2a">
+
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/flexible.css" />
+    <link rel="stylesheet" href="css/textos.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.css" />
+    <link rel="stylesheet" href="css/formularios.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Fav y touch icons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="manifest" href="ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon" />
+
+    <style type="text/css">
+
+
+        /*=========================
+          05. PopUps / modals
+        =========================*/
+
+        /*POPUP MODAL "LOGIN"*/
+        .cont-modal0 { padding: 20px }
+        .cuerpo-contomodal { padding: 20px; font-size: 0.9em }
+        .popupt {margin: 50px auto; background: rgb(0,0,0,0); position: relative; z-index:12000; overflow: hidden;}
+        .inerpopup {border-radius: 15px; background-color: #454545; border: 3px solid #fff; position: relative; width: 320px; margin-top: 45px}
+        .user {   position: absolute; top: -45px; right: 113px; z-index: 100 }
+        .inerpopup__login { color: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 1.3em;  padding: 20px 15px 10px 15px; background-color: #b4b4b4 }
+        .inerpopup__cajaform { overflow: hidden; border-radius: 13px }
+        .inerpopup__form { padding: 15px; border-radius: 0}
+        .inerpopup_cerrar { position: absolute; top: 15px; right: 10px; transition: all 200ms; font-size: 30px; font-weight: bold; text-decoration: none; color: #fff; }
+        /*Fin POPUP MODAL "LOGIN"*/
+
+
+
+        .fondo-trans{ position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.6);
+          /*transition: opacity 500ms;*/
+          /*visibility: hidden;*/
+          /*opacity: 0;*/
+          display:none; z-index:11000; overflow-y:auto; }
+
+        .fondo-trans:target {visibility: visible; opacity: 1;}
+
+        .popup {margin: 50px auto; background: #fff; position: relative; z-index:12000; overflow: hidden;}
+
+        .popup.filtros {width:350px; background:#fff; border-top:6px solid #d93d52;}
+
+        .popup h2 {margin-top: 0; color: #333; font-family: Arial, Helvetica, sans-serif; font-size:1.692em; display:inline}
+
+        .popup .cerrar { position: absolute; top: 6px; right: 10px; transition: all 200ms; font-size: 1.3em; font-weight: normal; text-decoration: none; color: #333; z-index: 2 }
+        .popup .cerrar:hover {color: #000000;}
+        .popup .contenido {/*margin-top:10px;*/ /*max-height: 100px; overflow: auto;*/}
+
+
+        @media screen and (max-width: 700px){.popup{width: 80%;}}
+        /*@media screen and (max-width: 420px){.popup.login, .popup.filtros {width: 300px; margin:20px auto}}*/
+
+
+        .modal-full{max-width:90%;}
+        .modal-big{max-width:1000px;}
+        .modal-med{max-width:600px;}
+        .modal-min{max-width:400px;}
+
+        @media (max-width: 767px) {
+          .modal-med{max-width:90%;}
+          .modal-min{max-width:90%;}
+        /*  .modal .modal-content {padding:20px 15px;}*/
+        }
+
+        /*_______________CONTENIDOS MODALES_______________*/
+
+          /*Modal0*/
+          .cont-modal0 { padding: 20px }
+          .cuerpo-contomodal { padding: 20px; font-size: 0.9em }
+
+          /*Modal1*/
+          .cont-modal1 { padding: 0px }
+          .head-contmodal, .cuerpo-contomodal { padding: 20px; font-size: 0.9em; line-height: 1.4em }
+           
+          /*Modal2*/
+          .cont-modal2 { padding: 0px }
+          .head-contmodal, .cuerpo-contomodal { padding: 20px;  font-size: 0.9em; line-height: 1.4em; text-align: left;   }
+
+          /*Modal3*/
+          .cont-modal3 { padding: 0px }
+          .head-contmodal, .cuerpo-contomodal { padding: 20px;  font-size: 0.9em;  line-height: 1.4em; text-align: left;   }
+
+          /*Modal4*/
+          .cont-modal4 { padding: 0px }
+          .head-contmodal, .cuerpo-contomodal { padding: 20px;  font-size: 0.9em; line-height: 1.4em; text-align: left;  } 
+          .pie-modal { background-color: #cbcbcb }   
+
+
+
+          /*Modales sin contenedor para usar con el generador de modales*/
+          .boxmodal { -webkit-box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.1); -moz-box-shadow:    0px 0px 18px -2px rgba(0,0,0,0.1); box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.1) }
+          .boxmodal__cont { padding: 25px }
+          .boxmodal__cont--rayita { border-bottom: 1px solid #e7e7e7  }
+          .boxmodal__head { border-bottom: 1px solid #e7e7e7; height: 25%; font-size: 1.5em }
+          .boxmodal__boxtitulo { padding: 20px 0px 20px 60px }
+          .boxmodal__titulo { font-size: 0.9em }
+          .boxmodal__subtitulo { font-size: 0.6em; line-height: 1.1em }
+          .boxmodal__titulo-ico { padding: 0 25px; }                       
+          .boxmodal__titulo-ico span { font-size: 2em; line-height: 2em }
+          .boxmodal__slogan {font-size: 1.2em }
+          .boxmodal__icono { position: absolute; bottom: -34px; left: 0; right: 0; width: 70px; height: 70px; font-size: 2em; border-radius: 50%  }  
+          .boxmodal__icono i { position: absolute; top: 25px; left: 0; right: 0; }                  
+          .boxmodal__parrafo { font-size: 0.9em; line-height: 1.4em }
+          .boxmodal__pie { font-size: 0.8em; line-height: 1.3em  }
+          .boxmodal__footer { padding: 0 25px; }
+          .boxmodal__footer--borde {  border-top: 1px solid #e7e7e7;  font-size: 1em  }
+          .boxmodal__botones { padding: 10px }
+
+
+
+        /*=========================
+          09. Zonas y cajas
+        =========================*/
+
+
+        /*masonry- necesita macy.min.js y script en custom.js*/
+        #macy-container::before { content: ""; display: table; clear: both;}
+        #macy-container::after { content: ""; display: table; clear: both;}
+
+        .cajamasonry {margin-bottom: 10px; width:100%; overflow: hidden; background:#f2f2f2; padding-bottom:10px;}
+        .cajamasonry img{margin:0 auto; text-align:center;}
+        .cajamasonry .inforeview {padding:10px 10px 0px 10px; font-size:0.875em; line-height: 150%}
+        .cajamasonry .inforeview span{font-weight: bold; font-size: 1.125em; color:#002967; display:inline-block}
+        .cajamasonry .inforeview .verified {background: #5ab8ae; padding:5px; color:white; font-size:0.75em; line-height:0.75em; cursor:help; display:inline-block; border-radius:2px;}
+        .cajamasonry .inforeview span i{font-weight: normal; margin-right: 3px;}
+        .cajamasonry .inforeview .starszone{text-align:left; margin:2px 0;}
+        .cajamasonry .inforeview.bottom{padding-top:0px;}
+
+        @media (min-width:2000px) {
+          .cajamasonry img{display:block; max-width:375px;}
+        }
+
+
+        /*=========================
+          10. Links y botones
+        =========================*/
+
+        /*LINKS Y BOTONES*/
+        .boton.img { background: #ccc; padding: 4px 9px; border-radius: 4px; color: #777777; }
+        .boton.img:hover { color:#fff; background-color: #b5b5b5 }
+
+        .boton.cerrar { padding: 6px; margin: 0; border-radius: 50%; line-height: 1em; font-size: .7em }
+
+
+        /*btn texto*/
+        a.btn-texto {color: #0c54a0; display: inline-block; font-weight: normal; letter-spacing: 0.5px; text-decoration: none; outline: none; margin-top:10px;}
+        .btn-texto:after {content: "\203A"; font-size:1.1333em;margin-left: 5px;}
+
+        /*Subraya animado*/
+        a.subrayar {text-decoration: none; background-image: linear-gradient(black, black); background-position: 0% 100%; background-repeat: no-repeat; background-size: 0% 1px; transition: background-size .3s;}
+        a.subrayar:hover, a.subrayar:focus {background-size: 100% 1px;}
+
+
+        /*EFECTOS BOTONES*/
+
+        /*crecer*/
+        .hvr-grow {
+          display: inline-block;
+          vertical-align: middle;
+          -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          -webkit-transition-property: transform;
+          transition-property: transform;
+        }
+        .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+        }
+
+        /*empequeñecer*/
+        .hvr-shrink {
+          display: inline-block;
+          vertical-align: middle;
+          -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          -webkit-transition-property: transform;
+          transition-property: transform;
+        }
+        .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+          -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+        }
+
+        /* Wobble Vertical */
+        @-webkit-keyframes hvr-wobble-vertical {
+          16.65% {
+            -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+          }
+          33.3% {
+            -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+          }
+          49.95% {
+            -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+          }
+          66.6% {
+            -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+          }
+          83.25% {
+            -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+          }
+          100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+          }
+        }
+        @keyframes hvr-wobble-vertical {
+          16.65% {
+            -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+          }
+          33.3% {
+            -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+          }
+          49.95% {
+            -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+          }
+          66.6% {
+            -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+          }
+          83.25% {
+            -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+          }
+          100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+          }
+        }
+        .hvr-wobble-vertical {
+          display: inline-block;
+          vertical-align: middle;
+          -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        }
+        .hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+          -webkit-animation-name: hvr-wobble-vertical;
+          animation-name: hvr-wobble-vertical;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+        }
+
+
+        /* Wobble Horizontal */
+        @-webkit-keyframes hvr-wobble-horizontal {
+          16.65% {
+            -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+          }
+          33.3% {
+            -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+          }
+          49.95% {
+            -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+          }
+          66.6% {
+            -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+          }
+          83.25% {
+            -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+          }
+          100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+          }
+        }
+        @keyframes hvr-wobble-horizontal {
+          16.65% {
+            -webkit-transform: translateX(8px);
+            transform: translateX(8px);
+          }
+          33.3% {
+            -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+          }
+          49.95% {
+            -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+          }
+          66.6% {
+            -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+          }
+          83.25% {
+            -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+          }
+          100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+          }
+        }
+        .hvr-wobble-horizontal {
+          display: inline-block;
+          vertical-align: middle;
+          -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        }
+        .hvr-wobble-horizontal:hover, .hvr-wobble-horizontal:focus, .hvr-wobble-horizontal:active {
+          -webkit-animation-name: hvr-wobble-horizontal;
+          animation-name: hvr-wobble-horizontal;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+        }
+
+        /*Efecto cambia color suave link*/
+
+        .grad-link { color: #000;
+         -webkit-transition: color 1s ease-in; /*safari and chrome */
+         -moz-transition: color 1s ease-in; /* firefox */
+         -o-transition: color 1s ease-in; /* opera */
+         transition: color 1s ease-in;
+        }
+        .grad-link:hover { 
+         color: #0c54a0;
+        }
+
+        .multiple a {
+         color: #000;
+         background: #ccc;
+         padding: 5px;
+         -webkit-transition-property: color, background;
+         -webkit-transition-duration: 1s, 1s;
+         -webkit-transition-timing-function: linear, ease-in;
+        }
+        .multiple a:hover {
+         color: #fff;
+         background: #c00;
+        }
+
+
+        /*=========================
+          12. Forms
+        =========================*/
+
+        /*.formulario{border-left: 0; border-top:0; border-right: 0; }*/
+        .formulario { border-radius: 4px }
+        /*.labelcampos { color: #8f8f8f; font-family: 'Fjalla One', sans-serif }*/
+        .ojo-pass { position: relative;z-index: 10;top: 35px;right: 12px;cursor: pointer;font-size: 1.5em; float:right; }
+
+        .ico-campo { position: relative;z-index: 10;top: 35px;right: 12px;cursor: pointer;font-size: 1.5em; float:right; }
+
+
+        /*buscador simple*/
+        .input-simple { margin-bottom: 20px;}
+
+        a .btnformder { line-height: 195%; }
+        .btnformder { display: table-cell; position: absolute; top: 1px; right: 1px; z-index: 2; background: #f6f6f6; height: 47px;
+            width: 51px; font-size: 1.5714em; border-left: 0px solid rgba(0,0,0,0.20); vertical-align: middle; border-radius: inherit; text-align: center; }
+
+        a .btnformizq { line-height: 195%; }
+        .btnformizq { display: table-cell; position: absolute; top: 1px; left: 1px; z-index: 2; background: #f6f6f6; height: 47px;
+            width: 51px; font-size: 1.5714em; border-right: 0px solid rgba(0,0,0,0.20); vertical-align: middle; border-radius: inherit; text-align: center; }
+
+
+        /*Buscador escritorio/movil (el del menú) */
+          .buscador { font: normal 1em Arial, Helvetica, sans-serif; color: #666; background:#f9f9f9; border: 1px solid #ccc; padding:10px 10px;
+            margin-right:5px; display: inline-block; border-radius: 20px; width: 150px; z-index: 200000
+          }
+          .icobuscador { position: absolute; top:10px; right: 15px; display: inline-block; font-size: 1.3em; vertical-align: middle; 
+                          border-radius: inherit; text-align: center}
+          .icobuscador:hover { color: #777777;}
+
+          @media (max-width: 991px) {
+            .buscadormovil { display: none; position: fixed; }
+            .buscador { position: fixed; top: 0; left: 0; width: 100%; border-radius: 0; height: 57px }
+            .icocerrar { position: fixed; top: 15px; right: 20px; z-index: 200000 }
+           }
+
+
+
+
+
+        /*=========================
+            14.Animaciones
+        =========================*/
+
+        /*ahover*/
+        .ahover{-o-transition:.5s; -ms-transition:.5s; -moz-transition:.5s; -webkit-transition:.5s; transition: .5s;}
+
+
+        /*animación underline izq / der*/
+        .animacion-underline{width:auto; display:inline}
+        .animacion-underline a{color: currentcolor; position: relative; transition: all 0.3s ease; -o-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -webkit-transition: all 0.3s ease;}
+        .animacion-underline a::before {left: 0; bottom: 0; content: ''; right: 100%; height: 1px; position: absolute; background-color: white; transition: all 0.3s ease; -o-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -webkit-transition: all 0.3s ease;}
+        .animacion-underline a:hover::before {right: 0;}
+
+        /*animación underline center*/
+        .animacion-underline-center{position:relative; display: inline-block;}
+        .animacion-underline-center a, .animacion-underline-center a:hover{color:white;}
+        .animacion-underline-center:after {width: 0; height: 1px; content: ''; background: #fff; position: absolute; left: 0; right: 0; margin: 0 auto; bottom: -0px; -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; transition: all 0.4s ease-out;}
+        .animacion-underline-center:hover:after{width: 100%;}
+
+        /*Agranda un contenedor al pasar encima*/
+        .agranda { -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }
+        .agranda:hover { -webkit-transform: scale(1.05); -moz-transform: scale(1.05); transform: scale(1.05);}
+        .agranda.blur:hover { opacity: 0.8 }
+
+        /*Agranda foto al entrar en la página*/
+        .zoomentra{   animation-duration: 10s; animation-name: zoomin;  }
+        @keyframes zoomin { from { transform: scale(1);  } to { transform: scale(1.1); } }
+        .zoomentra.alternate { animation-direction: alternate; animation-iteration-count: infinite; }
+
+        /*Encoje un contenedor al pasar encima*/
+        .encoje { -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out;  }
+        .encoje:hover { -webkit-transform: scale(0.95); transform: scale(0.95);}
+        .encoje.blur:hover  { opacity: 0.8 }
+
+        /*Resplandor*/
+        .glow {  box-shadow: 0px 0px 5px 4px #3ca9fd; }
+
+        /*Filtro color*/
+        .filtro-gris:hover {background: yellow; -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; -webkit-filter: grayscale(100%);  filter: grayscale(100%); }
+          /*utiliza el color del background de la caja contenedora*/
+        .filtro-color:hover { mix-blend-mode: screen; -webkit-filter: grayscale(100%) contrast(200%); filter: grayscale(100%) contrast(200%); opacity: 1; }
+
+
+        /*typewriter*/
+        .typewriter h1 {
+          color: #000;
+          overflow: hidden; /* Ensures the content is not revealed until the animation */
+          border-right: .15em solid orange; /* The typwriter cursor */
+          white-space: nowrap; /* Keeps the content on a single line */
+          margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+          letter-spacing: .15em; /* Adjust as needed */
+          animation: 
+            typing 3.5s steps(30, end),
+            blink-caret .5s step-end infinite;
+        }
+
+              /* The typing effect */
+              @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+              }
+
+              /* The typewriter cursor effect */
+              @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: orange }
+              }
+
+        /*Parpadeo y escalado*/
+        .blink05 { animation: blink 0.5s linear infinite; }
+        .blink1 { animation: blink 1s linear infinite; }
+        .blink2 { animation: blink 2s linear infinite; }
+        .blink3 { animation: blink 3s linear infinite; }
+        .blink4 { animation: blink 4s linear infinite; }
+
+        @keyframes blink{
+        0%{opacity: 0.5;}
+        50%{opacity: 1;}
+        100%{opacity: 0.5;}
+        }
+
+        .blk-spand02 { animation: blk-spand 0.2s linear infinite; }
+        .blk-spand05 { animation: blk-spand 0.5s linear infinite; }
+        .blk-spand1 { animation: blk-spand 1s linear infinite; }
+
+        @keyframes blk-spand{
+        0%{transform: scaleX(1);}
+        50%{transform: scaleX(1.02);;}
+        100%{transform: scaleX(1);}
+        }
+
+
+
+
+        /*=========================
+          15. Slider
+        =========================*/
+
+        .img100x100{position:relative; z-index:1;}
+
+        .slidercontent {display: block !important; color:white;}
+        .innerslider {display: flex; justify-content: left; align-items: center; margin: auto; position: absolute; z-index: 1; width: 100%; height: 100%;}
+        .slidercontent {max-width:700px; margin-left:8%;}
+
+        .slider-text {font-size: 3em; font-family:'Martel Sans', sans-serif; color: #fff; letter-spacing: 0px; line-height:110%; padding: 0; margin: auto; text-transform:uppercase; display:inline; font-weight:700;}
+        .slider-text span{color:#f7921a;}
+
+        .slider-text.movil {font-size:2em;}
+
+
+        @media (max-width: 991px) {
+          .innerslider{justify-content: center;}
+          .slidercontent{margin-left:0px; padding:20px}
+          .slider-text span{background:none; padding:0px; color:#f7921a; font-weight:800; display:inline}
+        }
+
+        @media (min-width: 1400px) {
+            .slidercontent {margin-left:10%;}
+        }
+
+        @media (min-width: 1600px) {
+            .slidercontent {margin-left:15%;}
+        }
+
+
+
+
+
+        /*=========================
+          16. Multimedia
+        =========================*/
+
+
+        /*google maps*/
+        .gmap{position:relative;}
+        .gmap iframe{width:100%; margin-bottom:0px; border:1px solid #e7e7e7;}
+        #mapacontacto {width:100%; height:450px; border-bottom:2px solid #fff;}
+        #mapatrabajos {width:100%; height:500px; border:1px solid #e7e7e7;}
+
+
+        /*responsive video*/
+        @media (min-width: 1400px) {
+          .zona_video{margin:0 auto; width:70%; display:table; background:blue}
+        }
+
+        .video-container {position: relative; padding-bottom: 56.25%; /*padding-top: 30px;*/ height: 0; overflow: hidden; margin:0px auto;}
+        .video-container iframe,  
+        .video-container object,  
+        .video-container embed {position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;}
+
+        /* vídeo ajustado al centro con un tamaño máximo */
+        .video-wrapper {width: 1024px; max-width: 100%; margin: 0 auto;}
+        .video-wrapper2 {width: 500px; max-width: 100%; margin: 0 auto;}
+
+
+
+        /*=========================
+          18. Redes sociales
+              e iconos svg
+        =========================*/
+
+        ul.social-icons {margin-top: 0px;}
+        .social-icons li {vertical-align: top; display: inline-block; height: auto; margin-bottom: 4px}
+        .social-icons li img{width: 18px; height: auto;}
+
+        .facebook, .twitter, .youtube, .linkedin, .google-plus, .vimeo, .whatsapp, .pinterest, .instagram, .flickr, .rss, .paypal, .telegram { display: block; cursor: pointer; color: grey;}
+        .facebook span, .twitter span, .youtube span, .linkedin span, .vimeo span, .whatsapp span, .pinterest span, .instagram span, .flickr span, .rss span, .paypal span, .telegram span { font-size: 1.3em; }
+        .facebook span:hover, .twitter:hover span, .youtube span:hover, .linkedin span:hover, .vimeo span:hover, .whatsapp span:hover, .pinterest span:hover, .instagram span:hover, .flickr span:hover, .rss span:hover, .paypal span:hover, .telegram span:hover { color: white; }
+        .facebook {padding:8px 12px;  background-color: #2a2a2a;} .facebook:hover {background-color: #3d5b99; color: white;}
+        .twitter {padding:8px 12px; background-color: #2a2a2a;} .twitter:hover {background-color: #00aced; color: white;}
+        .youtube {padding:8px 12px; background-color: #2a2a2a;} .youtube:hover {background-color: #e64a41; color: white;}
+        .linkedin {padding:8px 12px; background-color: #2a2a2a;} .linkedin:hover {background-color: #0073a4; color: white;}
+        .google-plus {padding:8px 12px; background-color: #2a2a2a;} .google-plus:hover {background-color: #e25714; color: white;}
+        .vimeo {padding:8px 12px; background-color: #2a2a2a;} .vimeo:hover {background-color: #1ab7ea; color: white;}
+        .whatsapp {padding:8px 12px; background-color: #2a2a2a;} .whatsapp:hover {background-color: #3db629; color: white;}
+        .pinterest {padding:8px 12px; background-color: #2a2a2a;} .pinterest:hover {background-color: #bd081c; color: white;}
+        .instagram {padding:8px 12px; background-color: #2a2a2a;} .instagram:hover {background-color: #065b9e; color: white;}
+        .flickr {padding:8px 12px; background-color: #2a2a2a;} .flickr:hover {background-color: #0063db; color: white;}
+        .rss {padding:8px 12px; background-color: #2a2a2a;} .rss:hover {background-color: #eb8231; color: white;}
+        .paypal {padding:8px 12px; background-color: #2a2a2a;} .paypal:hover {background-color: #0b3281; color: white;}
+        .telegram {padding:8px 12px; background-color: #2a2a2a;} .telegram:hover {background-color: #00aced; color: white;}
+
+
+
+
+        /*=========================
+          19. Media Queries
+        =========================*/
+
+        .noverflow{overflow:visible;}
+
+        .tablet.visible, .movil.visible{visibility:hidden; display:none;}
+        .visible-max{visibility:hidden; display:none}
+
+        @media (min-width:1940px) {}
+
+        @media (min-width:1400px) {
+          .visible-max{visibility:visible; display:inherit;}
+        }
+
+        @media (max-width:1200px) {
+          .table-responsive{width:100%; margin-bottom:15px; overflow-x:scroll; overflow-y:hidden; -ms-overflow-style:-ms-autohiding-scrollbar; -webkit-overflow-scrolling:touch; /*border:1px solid #ddd*/}
+          .table-responsive>.table{margin-bottom:0}
+          .table-responsive>.table>thead>tr>th,.table-responsive>.table>tbody>tr>th,.table-responsive>.table>tfoot>tr>th,.table-responsive>.table>thead>tr>td,.table-responsive>.table>tbody>tr>td,.table-responsive>.table>tfoot>tr>td{white-space:nowrap}
+        }
+
+        @media (max-width: 991px) {
+
+          .zona-bus-pes{margin:40px auto 0 auto; display:table; float:none;}
+          .zona-buscador button.icon{margin-left: -54px;}
+
+          .zona-abajo {float:none; margin:0 auto; text-align:center;max-width:400px}
+          .lnkaba li{background:none; padding:0px;}
+          
+          .centradomovil{margin:0 auto; display:block; text-align:center; float:none}
+            
+          /*.invisible{visibility:hidden; display:none;}
+          .visible{visibility:visible; display:inline-block;}*/
+          
+          .tablet.invisible{visibility:hidden; display:none;}
+          .tablet.visible{visibility:visible; display:inherit;}
+
+          
+          .septopc{margin-top:0px;}
+          /*.logotipo {text-align:center; margin:10px auto 10px auto; float:none;}*/
+          
+          /*.zona-centrada{margin:0 auto; display:table;}*/
+          .elipsis.nohidden{white-space: normal; overflow: inherit; text-overflow: clip;}
+          
+          .tablet.noelipsis{white-space: normal; overflow: inherit; text-overflow: clip;}
+          
+          .centrado-tablet{margin:0 auot; text-align:center; float:none;}
+          
+
+        }
+
+        @media (max-width: 767px) {
+          
+          .zona-buscador{width: 320px;}
+          .zona-buscador input#search{width: 320px;}
+          .centrado-galeria{text-align:center; margin:0 auto;}
+          
+          .invisible_en_movil{visibility:hidden; display:none}
+          .visible_en_movil{visibility:visible; display:inline-block;}
+          
+          .movil.invisible{visibility:hidden; display:none}
+          .movil.visible{visibility:visible; display:inherit;}
+          
+          .wrapper{display:block;}
+          .gmap iframe{width:100%;border:0px; padding:0;}
+          .elipsis.nohiddenmin{white-space: normal; overflow: inherit; text-overflow: clip;}
+          
+          .movil.noelipsis{white-space: normal; overflow: inherit; text-overflow: clip;}
+          
+          .centrado-movil{margin:0 auot; text-align:center; float:none;}
+        }
+
+
+        @media (min-width: 320px) and (max-width:720px) {
+          .cajablanca.max{padding:40px 15px}
+          
+          .img-izq, .img-der{float:none; text-align:center; width:auto; max-width:502px; margin:0 auto 15px auto;}
+          .zonagaleria{text-align:center}
+        }
+
+        @media (max-width: 720px){
+          .imgmin{width:120px;}
+        }
+
+
+        /*=========================
+          20. Mensajes Admin
+        =========================*/
+
+        .msg-form{
+          position: relative;
+          display:inline-block;
+          margin: 0px 0px 15px 0px;
+          padding:10px;
+          font: normal 1em /*'Poppins',*/ Arial, Helvetica, sans-serif; 
+          /*min-width:180px;*/
+          line-height:130%;
+        }
+
+        .msg-form.min{padding:8px; font-size:0.9285em;}
+
+        .msg-form.peq{font-size:0.8571em; /*font-style:italic;*/ padding:4px; margin:0px}
+
+        .msg-form.transparente{background:rgba(255,255,255,0.65); border:1px solid #ccc; color:#4b4b4b;}
+
+        .msg-form.blanco{background:#fff; border:1px solid #dbdbdb; color:#4b4b4b;}
+        .msg-form.verde{background:#dff0d8; border:1px solid #d6e9c6; color:#3c763d;}
+        .msg-form.amarillo{background:#f9edcf; border:1px solid #f6e4b8; color:#5f5952;}
+        .msg-form.rojo{background:#f5e8eb; border:1px solid #e4d1d6; color:#c33939;}
+        .msg-form.amarilla{background:#ffffec; border:1px solid #ececdb; color:#4b4b4b;}
+        .msg-form.azul{background:#e4f0f1; border:1px solid #c3dbde; color:#416888;}
+
+        /*.posicion-mensajes{position: fixed;  right: 15px; top: 20px; z-index:5000;width:50%;}*/
+
+        .posicion-mensajes{position:fixed; z-index:1000000; top:15px; right:20px; /*max-width:500px;*/width:50%;
+          right: calc(50% - 700px + 20px); /*la mitad del tamaño máximo de pantalla definido en flexible*/
+        }
+
+        @media all and (max-width: 1400px){.posicion-mensajes {right: 20px;}}
+        @media all and (max-width: 1200px){.posicion-mensajes {right: 20px;}}
+        @media (max-width: 480px) {.posicion-mensajes {right: 10px;max-width:400px; font-weight:normal}}
+        @media (max-width: 768px) {.posicion-mensajes{width:90%;}}
+
+
+        /*mensaje ok*/
+        .mensaje {
+          color:#fff;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+          background: url("../images/mensaje_correcto.svg") left 7px top 16px no-repeat;
+          background-color: #5ebd5e;
+            border: 1px solid #43a543;
+          padding: 11px 15px 10px 36px;
+          margin: 3px;
+          display:block;
+          font-size:1.077em;
+          /*min-width:200px;
+          max-width:500px;*/
+        }
+
+        .mensaje a{color:#fff}
+        .mensaje a:hover{color:#fff}
+
+
+        /*aviso*/
+        .aviso {
+          color:#333;
+          text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+          background: url("../images/mensaje_aviso.svg") left 7px top 15px no-repeat;
+          background-color: #ffae10/*f4b04f*/;
+            border: 1px solid #f19a1f;
+          padding: 11px 15px 10px 36px;
+          margin: 3px;
+          font-size:1.077em;
+        }
+
+        .aviso a{color:#333;}
+        .aviso a:hover{color:#000;}
+
+        /*error ko*/
+        .error {
+          color:#fff;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+          background: url("../images/mensaje_error.svg") left 7px top 14px no-repeat;
+          background-color: #e66454;
+            border: 1px solid #df3c28;
+          padding: 11px 15px 10px 36px;
+          margin: 3px;
+          font-size:1.077em;
+        }
+
+        .error a{color:#fff}
+        .error a:hover{color:#fff}
+
+
+
+        .btn-cerrar{text-align:center; margin-left:5px; position:relative; vertical-align: middle;}
+        .btn-cerrar a {
+          display: block;
+          font: bold 1em Arial, Helvetica, sans-serif;
+          color: #000; padding:4px 8px; text-decoration: none;
+          background:#fff\9; background-color:rgba(255, 255, 255, 0.4);
+          border-radius:inherit; text-shadow:none;
+        }
+        .btn-cerrar a:hover {color: #000; text-decoration: none;background-color:rgba(255, 255, 255, 0.8) }
+
+
+
+        /*=========================
+          21. Componentes
+        =========================*/
+
+        /*____________COLAPSE Y  ACORDEON____________*/
+        .collapse-list{margin-bottom:0;padding-left:0;list-style:none}
+                        @media (max-width:$screen-xs-max){
+                      }
+                        @media (min-width:$screen-sm){
+                      }
+                        @media (min-width:$screen-sm){
+                      }
+        .collapse-open{display:none}
+        .collapse-painel{visibility:hidden;max-height:0;opacity:0;transition:max-height .1s,visibility .3s,opacity .3s}
+        .collapse-open:checked ~ .collapse-painel{max-height:100%;opacity:100;visibility:visible}
+        .collapse-list li{margin-bottom:10px; }
+        .collapse-list .collapse-btn{ border:#eaeaea solid 1px;background:#e3e3e3;border-radius:2px;cursor:pointer;display:block;padding:5px 10px;}
+        .collapse-list .collapse-btn:hover{background:#eaeaea;}
+        .collapse-list .collapse-inner{padding:10px}
+
+
+        /*____________ETIQUETAS____________*/
+        .etiqueta { border-radius: 5px; padding: 6px 15px; font-size: .9em; margin-bottom: 4px; display: inline-block; color: #f1f1f1 !important;}
+        .etiqueta.fina { padding: 0px 8px; font-size: 0.7em }
+        .etiqueta span { font-size: 1em }
+        .etiqueta.rojo      { background-color: red;  }
+        .etiqueta.verde     { background-color: green; }
+        .etiqueta.azul      { background-color: blue;  }
+        .etiqueta.gris      { background-color: grey;  }
+        .etiqueta.colordest { background-color: #ff8b00; }
+        .etiqueta.rojo.bordebot      { background-color: red; border-bottom: 3px solid #ff5c5c; }
+        .etiqueta.verde.bordebot     { background-color: green; border-bottom: 3px solid #6acd7a; }
+        .etiqueta.azul.bordebot      { background-color: blue; border-bottom: 3px solid #6a7dcd; }
+        .etiqueta.gris.bordebot      { background-color: grey; border-bottom: 3px solid #c3c3c3; }
+        .etiqueta.colordest.bordebot { background-color: #ff8b00; border-bottom: 3px solid #ffd076; }
+        .etiqueta.cerrar i:hover{ color: #000 } .etiqueta.cerrar i{ padding-left: 10px  }
+        .etiqueta span:hover { color: black }
+
+
+
+        /*____________AVISOS EN PUNTO__________*/
+        .aviso-pt        { width: 11px; height: 11px; position: absolute; top: -6PX; right: -10px; border-radius: 6px; background-color: red; color: #f1f1f1; }
+        .aviso-pt.num    { height: auto; width: auto; border-radius: 4px; font-size: 10px; font-family: arial; text-align: 
+                      center; line-height: 12px; padding: 0 3px }
+        .aviso-pt.numbig { height: auto; width: auto; border-radius: 4px; font-size: 12px; font-family: arial; text-align: 
+                      center; line-height: 12px; padding: 4px 5px; top: -18px; }
+
+
+
+        /*________________CAJAS__________________*/
+
+        .caja-mensaje { background: #f0f0f0; border-radius: 5px; margin: 8px 0; padding: 20px 15px; border: 1px solid #cecece;  }
+        .caja-mensaje2 { background: #d9d9d9; border-radius: 10px; margin: 8px 0; padding: 30px 30px; border: 5px solid #cfcfcf; }
+        .caja-simple { padding: 15px; border: 1px solid #ccc; background-color: white;border: 1px solid rgba(0,0,0,.15); border-radius: 4px; 
+                      -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175); box-shadow: 0 6px 12px rgba(0,0,0,.175); background-clip: padding-box; z-index: 1000}
+
+
+        .tarjeta { font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            font-size: 1em; box-shadow: 0 1px 2px rgba(0, 0, 0, .22); box-sizing: border-box;
+            display: block; margin: 8px; padding: 16px; text-align: left; word-wrap: break-word; }
+        .tarjeta--redondeada { border-radius: 8px; }
+        .tarjeta--muyredondeada { border-radius: 18px; }
+        .tarjeta__titulo { font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 400;
+            font-weight: 400; font-size: 20px; margin: 4px 0 8px 0; padding: 0; display: block; box-sizing: border-box; color: #000; }
+        .tarjeta__contenido { margin: 0; font-size: 0.9em; line-height: 1.4; color: #545454;}
+
+        /*_____________________CAJAS INFO___________________*/
+
+
+        .sticker { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-radius: 5px; overflow: hidden; height: 80px; margin-bottom: 10px}
+        .sticker > div:nth-child(1) { background-color: rgba(0, 0, 0, 0.1); height: 80px; width: 80px; margin: 0px; 
+                                      line-height: 80px; text-align: center; font-size: 3em; }
+        .sticker > div:nth-child(1) img { height: 100%; margin: 0}                               
+        .sticker > div:nth-child(2) { display: inline-block; margin-left: 15px; }
+
+        @media (max-width: 991px) { .sticker { overflow: hidden; height: 55px}
+                                    .sticker > div:nth-child(1) img { height: 100%; margin: 0}  
+                                    .sticker > div:nth-child(2) p { line-height: 1.1em; font-size: 0.9em} 
+                                    .sticker > div:nth-child(1) { height: 100%; margin: 0; font-size: 2.2em; width: 55px; line-height: 55px}
+                                  }
+
+        .sticker-violeta { background-color: #7266ba } 
+        .sticker-azulito { background-color: #42A5F6 }
+        .sticker-verdito { background-color: #7ED320 }
+        .sticker-salmon  { background-color: #F75D81 }
+        .sticker-gris    { background-color: grey }
+
+        .stitched { padding: 20px; margin: 10px;  color: #fff; font-size: 21px; font-weight: bold; line-height: 1.3em; border: 2px dashed #fff; border-radius: 10px;  font-weight: normal; }
+        .stitched--rojo { background: #ff0030; box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5); text-shadow: -1px -1px #aa3030;}
+        .stitched--gris { background-color: grey; box-shadow: 0 0 0 4px grey, 2px 1px 6px 4px rgba(10, 10, 0, 0.5); text-shadow: -1px -1px grey; }
+        .stitched--verde { background-color: #67b700; box-shadow: 0 0 0 4px #67b700, 2px 1px 6px 4px rgba(10, 10, 0, 0.5); text-shadow: -1px -1px #67b700; }
+
+                /*___Cajas info2___*/
+        .topcajainfo{/* padding:5px; background:#efefef; color:#666;border-bottom:3px solid #fff*/
+          height:10px; width:50px; border-radius: 5px 5px 0 0; -moz-border-radius: 10px 10px 0 0; -webkit-border-radius: 10px 10px 0 0; }
+
+        .cajainfo{padding:5px;text-align:center; margin-bottom:10px; position:relative; background:#414141}
+        .cajainfo .description{font-weight:normal;text-align:center;margin:10px -5px; color:#fff;}
+        .cajainfo strong{color:#fff; font-size:1.231em}
+        .cajainfo .icon,.cajainfo .big-text{margin-top:15px;font-size:36px;line-height:36px;height:36px;/*font-weight:bold;*/ color:#ffffff;}
+
+        .cajainfo .horizontal{text-align:left; padding:10px;}
+        .cajainfo .icon-hor {float:left; margin:5px 0 2px 0; margin-left:10px; font-size:20px; line-height:20px;height:20px;/*font-weight:bold;*/ color:#ffffff;}
+        .cajainfo .descripcion-hor{display:block; margin:2px 0; overflow: hidden; padding: 0px 0px 0px 10px; color:#fff;text-align:left; line-height:1.2em}
+        .descripcion-hor strong{color:#fff; font-size:1.385em;}
+
+        .cajainfo:before{-webkit-transition:width;-moz-transition:width;-o-transition:width;transition:width;-webkit-transition-duration:500ms;transition-duration:500ms;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;content:"";width:5px;height:100%;background:rgba(0,0,0,.1);position:absolute;left:0;top:0}
+        .cajainfo:hover:before{width:100%;}
+
+        .cajainfo.fondo-verde { background-color: #7ED320 }
+        .cajainfo.fondo-azul  { background-color: #42A5F6 }
+        .cajainfo.fondo-rojo  { background-color: #ff004e }
+        .cajainfo.fondo-oliva { background-color: #839d3c }
+
+
+
+
+        /*___________________BOTON CON DATOS___________________*/
+
+        .btn-datos {  position: relative; display: inline-block; border-radius: 4px; vertical-align: middle; 
+                      border: 1px solid #d43f3a; background-color: #d9534f; margin: 0; padding: 0; font-size: 0.9em;
+                      color: #fff;cursor: pointer; margin-bottom: 4px }
+        .btn-datos:hover { background-color: #ae2e31;  color: white; }              
+        .btn-datos a span:hover { color: white; }
+
+        .btn-datos > span:nth-child(1)    { margin: 0 5px 0 10px; height: 20px}              
+        .btn-datos > span i:nth-child(1)  { margin-right: 5px; } 
+        .btn-datos > span i:nth-child(1):hover  { margin-right: 5px; color: white; } 
+        .btn-datos > span:nth-child(2)    { float: right; line-height: 26px;  padding-left: 5px;margin-right: 10px; border-left: 1px solid #d43f3a } 
+
+        .btn-datos.fblanco { background-color: white; color: #4c4c4c; border: 1px solid #a8a8a8  }
+        .btn-datos.fblanco > span:nth-child(2) { border-left: 1px solid #a8a8a8  }
+        .btn-datos.fblanco:hover { background-color: #dedede }
+        .btn-datos.fblanco > span i:nth-child(1):hover  { margin-right: 5px; color: #4c4c4c; } 
+
+        .btn-datos.fgris { background-color: #d0d0d0; color: #4c4c4c; border: 1px solid #a8a8a8  }
+        .btn-datos.fgris > span:nth-child(2) { border-left: 1px solid #a8a8a8  }
+        .btn-datos.fgris:hover { background-color: #b8b8b8 }
+        .btn-datos.fgris > span i:nth-child(1):hover  { margin-right: 5px; color: #4c4c4c; } 
+
+        .btn-datos.fverde { background-color: #4fd955; color: #fff; border: 1px solid #36b025  }
+        .btn-datos.fverde > span:nth-child(2) { border-left: 1px solid #36b025  }
+        .btn-datos.fverde:hover { background-color: #43bd48 }
+        .btn-datos.fverde > span i:nth-child(1):hover  { margin-right: 5px; color: #fff; } 
+
+        .btn-datos.fazul { background-color: #4f7cd9; color: #fff; border: 1px solid #255db0  }
+        .btn-datos.fazul > span:nth-child(2) { border-left: 1px solid #255db0  }
+        .btn-datos.fazul:hover { background-color: #466dbd }
+        .btn-datos.fazul > span i:nth-child(1):hover  { margin-right: 5px; color: #fff; } 
+
+        .btn-datos.fnaranja { background-color: #d18428; color: #fff; border: 1px solid #ae7026  }
+        .btn-datos.fnaranja > span:nth-child(2) { border-left: 1px solid #ae7026  }
+        .btn-datos.fnaranja:hover { background-color: #be761f }
+        .btn-datos.fnaranja > span i:nth-child(1):hover  { margin-right: 5px; color: #fff; } 
+
+        .btn-datos.fnegro { background-color: #4c4c4c; color: #fff; border: 1px solid #323232  }
+        .btn-datos.fnegro > span:nth-child(2) { border-left: 1px solid #323232  }
+        .btn-datos.fnegro:hover { background-color: #313131 }
+        .btn-datos.fnegro > span i:nth-child(1):hover  { margin-right: 5px; color: #fff; } 
+
+
+        .btn-ico { border-radius: 5px; overflow: hidden; color: #535353; background-color: #d5d5d5; padding: 5px 0px; font-size: 0.8em; vertical-align: middle; display: inline-block; }
+        .btn-ico >span>span i:nth-child(1):hover { color:#fff; }
+        .btn-ico > span > span:nth-child(1) { background-color: #535353; color: white; padding: 10px;  border-radius: 5px 0 0 5px }
+        .btn-ico > span > span:nth-child(2) { position: relative; line-height: 1.2em; padding: 3px 10px }
+        .ico-fder::after { content: "\25b6"; position: absolute; left: -4px; top: 3px; }
+        .btn-ico.f-rojo { background-color: #e45737 }
+        .btn-ico.f-amarillo { background-color: #e4d637 }
+        .btn-ico.f-azul { background-color: #6db1e0 }
+        .btn-ico.f-verde { background-color: #b9e06d }
+        .btn-ico:hover { background-color: grey; color:#535353; }
+
+
+        /*_____________________MENU DESPLEGABLE______________________*/
+        .triangulo { display: inline-block; width: 0; height: 0; margin: 0 0 2px 2px; vertical-align: middle; border-top: 4px dashed; border-right: 4px solid transparent; border-left: 4px solid transparent; }
+        .link-dropdownmenu { color:grey; } .link-dropdownmenu:hover { color:black; }
+        .dropdown-menu { position: absolute; top: 20px;right: 0;z-index: 1000;display: none; min-width: auto; padding: 5px 0; margin: 2px 0 0; list-style: none;
+            font-size: 14px; text-align: left; background-color: #fff; border: 1px solid #ccc; border: 1px solid rgba(0,0,0,.15);
+            border-radius: 4px; -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175); box-shadow: 0 6px 12px rgba(0,0,0,.175); background-clip: padding-box; }
+        .dropdown-menu-opc { line-height: 1em !important; padding: 5px !important; display: block; }
+        .dropdown-menu-enlace {
+            display: block; padding: 3px 20px; clear: both; font-weight: 400; line-height: 1.42857143; color: #333; white-space: nowrap; }
+        .dropdown-menu-enlace:hover {background-color: #d8d8d8}
+        .dropdown-menu-enlace.activo {background-color: #e6e6e6}
+        .dropdown-menu-imagen { vertical-align: baseline; }
+        .dropdown-menu-imagen--size { width: 30px; height: 25px }
+
+
+        /*______________________PASOS______________________*/
+        .caja-pasos { position: relative; }
+        .pt-pasos { position: absolute; top: -6px; right: 0; left: 0; 
+                    display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around;  }
+        .pt-pasos__paso { background-color: grey; color: white; border-radius: 15px; font-size: 0.9em; padding: 0 9px }
+        .linea-tiempo { background-color: grey; height: 12px; border-radius: 20px }
+
+
+        /*______________________CARGA______________________*/
+
+
+        /*Precarga en linea------------------------------*/
+        .progress { position: relative; height: 4px; display: block; width: 100%; background-color: #acece6; border-radius: 2px; margin: .5rem 0 1rem 0; overflow: hidden; }
+        .progress .indeterminate { background-color: #26a69a; }
+        .progress .indeterminate:before { content: ''; position: absolute; background-color: inherit; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+        .progress .indeterminate:after { content: ''; position: absolute; background-color: inherit; top: 0; left: 0; bottom: 0; will-change: left, right; -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; -webkit-animation-delay: 1.15s; animation-delay: 1.15s;}
+        @-webkit-keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}
+        @keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}
+        @-webkit-keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}
+        @keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}
+
+
+        /*Video responsive*/
+        /*&21*/
+        .video-container { padding-bottom:56.25%; height:0; overflow: hidden; position: relative; }
+        .video-container iframe { position: absolute; height:100%; width:100% top:0; left:0; }
+
+
+
+        /*________________________COMENTARIOS_____________________*/
+        .coment { margin: 15px }
+
+        .coment__caja  { border-bottom: 1px dotted #ddd; }
+        .coment > div { border-bottom: 0 dotted white }
+
+        .coment__tit { font-size: 1em; }
+        .coment__tit span { color: #c3c3c3 }
+
+        .coment__login { padding: 10px 0; margin: 10px 0; background-color: #e4e4e4; width: 100%; text-align: center; font-size: 0.9em }
+        .coment__login a { color: #00aeff; }
+
+        .coment__cajainput { margin:20px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+        .coment__cajainputavatar { margin: 0 10px 0 0 }
+        .coment__avatarinput { width: 50px }
+        .coment__botonenviar { height: 3.2em; cursor: pointer; }
+        .coment__input { border: 1px solid #e2e2e2; border-radius: 0px; margin-bottom: 0; font-size: 1em; }
+
+        .coment__caja { padding: 5px 0; margin: 5px 0 }
+
+        .coment__avatar { float: left; margin-top: 5px}
+        @media (max-width: 768px) { .coment__avatar { margin: 0 5px 0 0 } }
+
+        .coment__avatar img { width: 50px;     max-width: 100%; height: auto;  }
+        @media (max-width: 768px) { .coment__avatar img { width: 15px } }
+
+        .coment__datos  { padding: 0 0 0 75px }
+        @media (max-width: 768px) { .coment__datos { padding: 0 0 0 20px } }
+
+        .coment__nombre { font-size: 1em; font-weight: bold; display: inline-block; }
+        @media (max-width: 768px) { .coment__nombre { font-size: 0.9em;} }
+
+        .coment__fecha  { font-size: 0.7em }
+        .coment__texto  { font-size: 0.9em; line-height: 1.3em }
+        @media (max-width: 768px) { .coment__texto  { font-size: 0.8em; line-height: 1.3em } }
+        .coment__opcion { font-size: 0.8em }
+
+
+        /*______________________Zona politica privacidad_____________________*/
+        .zona-mensa { padding: 5px 10px; border: 1px solid #c6c6c6; margin-bottom: 10px; font-weight: bold;cursor:pointer;text-transform: uppercase; }
+        .switch_div { padding-bottom:10px }
+        .degradado-gris { background: rgba(254,254,254,1);
+        background: -moz-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(226,226,226,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(254,254,254,1)), color-stop(100%, rgba(226,226,226,1)));
+        background: -webkit-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(226,226,226,1) 100%);
+        background: -o-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(226,226,226,1) 100%);
+        background: -ms-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(226,226,226,1) 100%);
+        background: linear-gradient(to bottom, rgba(254,254,254,1) 0%, rgba(226,226,226,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e2e2e2', GradientType=0 ); }
+
+
+        /*___________________________Zona calendario_________________________*/
+        .calendar {width: 100%; margin:0 auto;}
+
+        .calendar caption {
+          margin: 0;  padding: 0;
+          /*background: #2c699e;*/
+          /*color: #fff;*/
+          font: normal 1.154em/*1.231em Tahoma,*/ Arial, Helvetica, sans-serif;
+          text-align: center;
+          padding:5px 0;
+          text-decoration: none; padding:4px 8px;
+          border: 1px solid #e3e3e3
+
+        }
+
+        .calendar caption a, .calendar caption a:hover{color: #fff;text-decoration: none;}
+
+
+        .calendar th {
+          font: bold 0.923em Tahoma, Arial, Helvetica, sans-serif;
+          /*color: #b7e6ff;*/
+          /*background: #428bca;*/
+          text-decoration: none;
+          border: 1px solid #e3e3e3; border-bottom: 1px solid grey;
+          padding:4px; cursor:help
+
+        }
+
+        .calendar .seleccion, .calendar td.seleccion a, .calendar td.seleccion a:link, .calendar td.seleccion a:visited {
+          color: #ffffff;
+          background: #449d44;
+          font-weight: bold;
+          /*-moz-box-shadow:0px 0px 18px #acd0e5 inset; -webkit-box-shadow:0px 0px 18px #acd0e5 inset; box-shadow:0px 0px 18px #acd0e5 inset;*/
+        }
+
+        .calendar .hoy, .calendar td.hoy a, .calendar td.hoy a:link, .calendar td.hoy a:visited {
+          color: #fff;
+          font-weight: bold;
+          background: #969696;
+          /*-moz-box-shadow:0px 0px 18px #acd0e5 inset; -webkit-box-shadow:0px 0px 18px #acd0e5 inset; box-shadow:0px 0px 18px #acd0e5 inset;*/
+        }
+
+        .calendar .finde, .calendar td.finde a, .calendar td.finde a:link, .calendar td.finde a:visited {
+          color: #000000;
+          font-weight: normal;
+          background: #fcf8dd;
+          /*-moz-box-shadow:0px 0px 18px #acd0e5 inset; -webkit-box-shadow:0px 0px 18px #acd0e5 inset; box-shadow:0px 0px 18px #acd0e5 inset;*/
+        }
+
+        .calendar td {
+          font-size:0.923em;
+          padding:0px;
+          text-align: center;
+          background: #fff; border: 1px solid #e3e3e3;
+          color:#333333;
+          height:30px
+        }
+
+        .calendar td a { text-decoration: none; font-weight: normal; display: block; height:30px; padding-top:5px; cursor:pointer;}
+        .calendar td a:link, .calendar td a:visited {color: #333333; background: #ffffff;}
+        .calendar td a:hover, .calendar td a:active, .calendar td a.activa {color: #333333; background: #e6e6e6; position: relative;
+          -moz-box-shadow:0px 0px 18px rgba(0, 0, 0, 0.1) inset; -webkit-box-shadow:0px 0px 18px rgba(0, 0, 0, 0.1) inset; box-shadow:0px 0px 18px rgba(0, 0, 0, 0.1) inset;
+        }
+
+
+        /*__________________________PROGRESS_BARS_________________________*/
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }/*es para marcar un contenido como oculto y que sólo esté disponible para los lectores ("screen readers" en inglés, de ahí el nombre de la clase CSS)*/
+
+         @-webkit-keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}
+         @-o-keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}
+         @keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}
+         
+          
+        .ico-progress{display:inline-block; color:#333; margin-right:5px}
+        .boxico{width:9px; height:9px; display:inline-block; margin-right:3px; background:inherit;}
+
+        .progress{height:20px;margin-bottom:20px;overflow:hidden;background-color:#f5f5f5;border-radius:4px;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);box-shadow:inset 0 1px 2px rgba(0,0,0,.1);}
+        .progress.big{height:30px;}
+        .progress.small{height:10px; border-radius:2px}
+        .progress.mini{height:5px; border-radius:1px}
+          
+        .progress-bar{float:left;width:0;height:100%;font-size:12px;line-height:20px;color:#fff;text-align:center;background-color:#0c8dcc;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);-webkit-transition:width .6s ease;-o-transition:width .6s ease;transition:width .6s ease;}
+        .progress-bar.big{line-height:30px;}
+        .progress-bar.small{line-height:10px; border-radius:0px}
+        .progress-bar.mini{line-height:5px; border-radius:0px}
+          
+        .progress-striped .progress-bar,.progress-bar-striped{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:40px 40px;background-size:40px 40px}
+         
+        .progress.active .progress-bar,.progress-bar.active{-webkit-animation:progress-bar-stripes 2s linear infinite;-o-animation:progress-bar-stripes 2s linear infinite;animation:progress-bar-stripes 2s linear infinite}
+         
+        .progress-bar[aria-valuenow="1"],.progress-bar[aria-valuenow="2"]{min-width:30px}
+        .progress-bar[aria-valuenow="0"]{min-width:30px;color:#777;background-color:transparent;background-image:none;-webkit-box-shadow:none;box-shadow:none}
+         
+        .progress-bar-success{background-color:#5cb300}
+        .progress-striped .progress-bar-success{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)}
+         
+        .progress-bar-info{background-color:#2dabc4}
+        .progress-striped .progress-bar-info{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)}
+         
+        .progress-bar-warning{background-color:#ea5811}
+        .progress-striped .progress-bar-warning{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)}
+         
+        .progress-bar-danger{background-color:#da3436}
+        .progress-striped .progress-bar-danger{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)}
+         
+
+
+        /*=========================================
+          21. Ajuste vertical web a pantalla
+          (consigue que el pie/footer esté siempre
+          ajustado abajo)
+        ==========================================*/
+
+        .ajustalalto { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: 100vh }
+        .ajustalalto-contenido { -webkit-box-flex: 1;-ms-flex: 1 0 auto;flex: 1 0 auto; }
+        .ajustalalto-pie { -ms-flex-negative: 0;flex-shrink: 0; }
+
+
+
+        /*=========================================
+          Boton circular
+        =========================================*/
+        .botoncir { position: relative; display: table; font-size: 1em; width: auto; max-width: auto; line-height: 130%; color: #4d4d4d; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; outline: none; padding: 8px 15px 8px 40px; /*margin: 0 auto;*/ border-radius: 50px;   background-color: white; }
+        .botoncir:after { content: '\003e'; font-size: 1.25em; font-weight: 400; color: white; background-color: #3c3c3b; width: 30px; height: 30px; position: absolute; left: 5px; top: 50%; margin-top: -15px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; text-align: center; display: flex; align-items: center; justify-content: center; }
+
+
+        .botoncir-vert { position: relative; display: flex; font-size: 1em; width: auto; max-width: auto; color: #1c1c1c; -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale; padding: 87px 8px 8px 3px; margin: 0px auto; max-width: : 200px; justify-content: center; text-align: center; }
+        .botoncir-vert:after { content: '+'; font-size: 3.25em; font-weight: 800; color: #ececec; background-color: #ffffff; width: 80px; height: 80px;
+          position: absolute; top: 0PX; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; text-align: center;
+          display: flex; align-items: center; justify-content: center; }
+        .botoncir-vert:hover:after { color: #000 }
+
+        .botoncir-vert {
+          position: relative;
+          display: flex;
+          font-size: 1.025em;
+          width: auto;
+          max-width: auto;
+            color: #1c1c1c;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: 87px 8px 8px 3px;
+          margin: 0px auto;
+            max-width: 200px;
+          justify-content: center;
+          text-align: center;
+          font-weight: 400;
+        }
+
+        .botoncir-vert:after {
+          content: '+';
+          font-weight: 600;
+          font-size: 3em;
+          color: #ececec;
+          background-color: #ffffff;
+          width: 80px;
+          height: 80px;
+          position: absolute;
+          top: 0px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius:inherit;
+        }
+
+        .botoncir-vert:hover:after {color: #000}
+
+
+
+        /*=========================================
+          LISTADO IMAGENES HORIZONTAL
+        =========================================*/            
+        #caja-galeria {position:relative; width:100%; height:230px;}
+        #caja-galeria ul {position:absolute; list-style:none; padding-inline-start: 0px;}
+        #caja-galeria .zona-scroll {overflow:hidden; overflow-x:scroll; position:relative; width:100%; height:230px;}
+
+        #caja-galeria li {white-space:nowrap; position:relative}
+        #caja-galeria li a img{height:200px;}/*tamaño img*/
+        #caja-galeria li a {text-decoration:none; white-space:nowrap; padding-right:5px; position:relative;}
+        #caja-galeria li:last-child a{padding-right:0px;}
+        #caja-galeria li a img {background:#f1f1f1;}
+
+        /*estilo barra horizontal*/
+        #caja-galeria .zona-scroll::-webkit-scrollbar {width:10px; height:10px}
+        #caja-galeria .zona-scroll::-webkit-scrollbar-track {box-shadow:1px 1px 5px rgba(0,0,0,0.3) inset; border-radius:1px}
+        #caja-galeria .zona-scroll::-webkit-scrollbar-thumb {background-color:#7a7a7a; border-radius:1px}
+        #caja-galeria .zona-scroll::-webkit-scrollbar-thumb:hover {background-color:#525252}
+        #caja-galeria {scrollbar-width: thin; scrollbar-color: #525252 #e5e5e5;}/*firefox*/
+        #caja-galeria *{scrollbar-width: thin; scrollbar-color: #525252 #e5e5e5;}/*firefox*/
+
+
+        /*=========================================
+          LISTADO DE IMÁGENES
+        =========================================*/  
+        .contenedor-foto {margin-bottom: 10px; overflow: hidden;}
+        .contenedor-foto img {
+          -webkit-transition: -webkit-transform 0.4s;
+          -moz-transition: -moz-transform 0.4s;
+          -o-transition: -o-transform 0.4s;
+          transition: transform 0.4s;
+        }
+        @media (min-width: 768px) {
+          .listado-vertical:hover .contenedor-foto img {
+            -webkit-transform: scale(1.2, 1.2);
+            -ms-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+          }
+        }    
+
+
+        /*=========================================
+          LISTADO CAJA VERTICAL
+        =========================================*/  
+        .listado-caja-vertical{display:block;max-width:152px; margin:10px auto 20px auto; position: relative; border:1px solid rgba(0,0,0,0.10); border-bottom: 6px solid rgba(0,0,0,0.10);background-color:rgba(255,255,255,0.5);  border-radius:auto !important;  -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s;}
+        .listado-caja-vertical .zonatexto{padding:0px 10px 10px 10px; font-size:0.9375em; line-height:130%; color:#bf4831; height:40px; overflow:hidden}
+        .listado-caja-vertical .zonatexto h2, .listado-caja-vertical .zonatexto h3, .listado-caja-vertical .zonatexto h4{color:#bf4831;}
+        .listado-caja-vertical .zonaimagen{position:relative; padding:10px; text-align:center;}
+        .listado-caja-vertical .zonaimagen img{max-width:auto;}
+
+        .listado-caja-vertical:not(.no-hover):hover {transform: translateY(-6.5px);}
+
+
+        /*=========================================
+          CAMPO TEXTAREA QUE CRECE
+        =========================================*/ 
+        /*Fuente: https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/*/
+
+        .grow-wrap { display: grid; }
+        .grow-wrap::after {
+          content: attr(data-replicated-value) " ";
+          white-space: pre-wrap;
+          visibility: hidden; }
+        .grow-wrap > textarea {
+          resize: none;
+          overflow: hidden; }
+        .grow-wrap > textarea,
+        .grow-wrap::after {
+          border: 1px solid black;
+          padding: 0.5rem;
+          font: inherit;
+          grid-area: 1 / 1 / 2 / 2; }
+
+
+
+        /*=========================================
+          LISTADO CON NÚMEROS DECORADOS
+        =========================================*/ 
+        ol.numbered-list > li:before {
+         content: counter(li);
+         position: absolute;
+         box-sizing: border-box;
+         width: 45px;
+         height: 45px;
+         background: #f3b70f;
+         border-radius: 50%;
+
+         /*Añadido por mi*/
+         left: -50px;
+         font-size: 30px;
+         line-height: 45px;
+         text-align: center;
+         font-weight: bolder;
+        }
+
+        ol.numbered-list li {
+          position: relative;
+          left: 0px;
+          list-style: none;
+          counter-increment: li;
+
+          /*Añadido por mi*/
+          line-height: 2.1em;
+          font-size: 1.4em;
+          padding-left: 15px
+        }
+
+        /*=========================================
+          LISTADO DE PRECIOS
+        =========================================*/ 
+
+        .pricing ul {
+            list-style: none;
+            padding: 0
+        }
+        .pricing .unit {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            min-width: 250px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+            -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+        }
+        .pricing .unit.active {
+            top: 5px;
+            margin-left: -36px;
+            margin-right: -36px;
+            z-index: 1;
+            -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+            -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+            box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+        }
+        .pricing .unit.active .price-title h3 {
+            font-size: 40px
+        }
+        @media screen and (max-width: 767px) {
+            .pricing .unit {
+                display: block;
+                margin-bottom: 20px
+            }
+            .pricing .unit.active {
+                top: 0;
+                margin-left: 0;
+                margin-right: 0
+            }
+            .pricing .unit.active .price-title h3 {
+                font-size: 30px
+            }
+        }
+        .pricing .price-title {
+            padding: 20px 20px 10px;
+            -webkit-border-top-left-radius: 4px;
+            -moz-border-radius-topleft: 4px;
+            border-top-left-radius: 4px;
+            -webkit-border-top-right-radius: 4px;
+            -moz-border-radius-topright: 4px;
+            border-top-right-radius: 4px;
+            color: #FFF
+        }
+        .pricing .price-title h3,
+        .pricing .price-title h3>p {
+            margin: 0
+        }
+        .pricing .price-body {
+            padding: 20px 20px 10px
+        }
+        .pricing .price-body ul {
+            padding-top: 10px
+        }
+        .pricing .price-body li {
+            margin-bottom: 10px
+        }
+        .pricing .price-body h4 {
+            margin: 0
+        }
+        .pricing .price-foot {
+            padding: 20px;
+            -webkit-border-bottom-left-radius: 4px;
+            -moz-border-radius-bottomleft: 4px;
+            border-bottom-left-radius: 4px;
+            -webkit-border-bottom-right-radius: 4px;
+            -moz-border-radius-bottomright: 4px;
+            border-bottom-right-radius: 4px;
+            background-color: #E6E9ED
+        }
+        .pricing .price-primary .price-title {
+            background-color: #4FC1E9
+        }
+        .pricing .price-primary .price-body {
+            background-color: #d7f1fa
+        }
+        .pricing .price-primary .price-body ul {
+            border-top: 1px solid #aae1f4
+        }
+        .pricing .price-success .price-title {
+            background-color: #A0D468
+        }
+        .pricing .price-success .price-body {
+            background-color: #ebf6df
+        }
+        .pricing .price-success .price-body ul {
+            border-top: 1px solid #d2ebb7
+        }
+        .pricing .price-warning .price-title {
+            background-color: #F5D76E
+        }
+        .pricing .price-warning .price-body {
+            background-color: #fffefd
+        }
+        .pricing .price-warning .price-body ul {
+            border-top: 1px solid #fcf1cd
+        }
+
+
+
+   </style>
+
+    
+</head>
+
+<body class="wide ajustalalto"><!--boxed fondoweb-->
+
+<!--POP UPs -->
+<!-- &19b -->
+
+<div id="modal0" class="fondo-trans">
+    <div class="popup modal-min Sombra redondo">
+
+        <a class="cerrar" href="javascript:oculta_id('modal0');"><span class="flaticon-cerrar"></span></a>
+
+        <!-- Modal0 -->
+        <div class="cont-modal0">
+            <p class="subtitulo c-destacado2 center">Título de la modal</p>
+            <div class="separa-min"></div>
+            <div class="cuerpo-contomodal">
+                <p>Contenido de la popup SIMPLE, de la popup SIMPLE, de la popup SIMPLE, de la popup SIMPLE, de la popup SIMPLE, de la popup SIMPLE.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+<div id="modal1" class="fondo-trans">
+    <div class="popup modal-med sombra redondo-big">
+
+        <a class="cerrar" href="javascript:oculta_id('modal1');"><span class="flaticon-cerrar"></span></a>
+
+        <!-- Modal1 -->
+        <div class="cont-modal1">
+            <div class="head-contmodal destacado">
+                <p class="subtitulo c-blanco center">Este es el título de la módal</p>
+            </div>
+            <div class="cuerpo-contomodal">
+                Contenido de la popup MED, de la popup , de la popup MED, de la popup MED, de la popup MED, de la popup MED.<br><br>
+                Contenido de la popup MED, de la popup MED, de la popup MED, de la popup MED, de la popup MED, de la popup MED.<br><br>
+                Contenido de la popup MED, de la popup MED, de la popup MED, de la popup MED, de la popup MED, de la popup MED.
+                <br>
+                Contenido de la popup MED, de la popup MED, de la popup MED, de la popup MED, de la popup MED, de la popup MED.
+                <br>
+                Contenido de la popup MED, de la popup MED, de la popup MED, de la popup MED, de la popup MED, de la popup MED.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="fondo-trans">
+    <div class="popup modal-big sombra redondo">
+
+        <a class="cerrar" href="javascript:oculta_id('modal2');"><span class="flaticon-cerrar"></span></a>
+
+        <!-- Modal2 -->
+        <div class="cont-modal2">
+            <div class="head-contmodal destacado">
+                <p class="subtitulo-big c-blanco center">Este es el título de la módal</p>
+            </div>
+            <div class="cuerpo-contomodal">
+                Contenido de la popup BIG, de la popup BIG, de la popup BIG, de la popup BIG, de la popup BIG, de la popup BIG.<br><br>
+                Contenido de la popup BIG, de la popup BIG, de la popup BIG, de la popup BIG, de la popup BIG, de la popup BIG.<br><br>
+                Contenido de la popup BIG, de la popup BIG, de la popup BIG, de la popup BIG, de la popup BIG, de la popup BIG.
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="fondo-trans">
+    <div class="popup modal-full sombra redondo">
+
+        <a class="cerrar" href="javascript:oculta_id('modal3');"><span class="flaticon-cerrar"></span></a>
+
+        <!-- Modal3 -->
+        <div class="cont-modal3">
+            <div class="head-contmodal destacado">
+                <p class="subtitulo-big c-blanco center">Este es el título de la módal</p>
+            </div>
+            <div class="cuerpo-contomodal">
+                Contenido de la popup FULL, de la popup FULL, de la popup FULL, de la popup FULL, de la popup FULL, de la popup FULL.<br><br>
+                Contenido de la popup FULL, de la popup FULL, de la popup FULL, de la popup FULL, de la popup FULL, de la popup FULL.<br><br>
+                Contenido de la popup FULL, de la popup FULL, de la popup FULL, de la popup FULL, de la popup FULL, de la popup FULL.
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<div id="modal4" class="fondo-trans">
+    
+    <div class="popup modal-med sombra redondo-big center relative">
+        <a class="cerrar" href="javascript:oculta_id('modal4');"><span class="flaticon-cerrar"></span></a>
+
+        <!-- Modal4 -->
+        <div class="cont-modal4 relative">
+            <div class="separa-min"></div>
+            <p class="subtitulo-big c-destacado1 center">Este es el título de la módal</p>
+            <div class="cuerpo-contomodal">
+                Contenido de la popup con ICONO, de la popup con ICONO, de la popup con ICONO, de la popup con ICONO, de la popup con ICONO.<br><br>
+                Contenido de la popup con ICONO, de la popup con ICONO, de la popup con ICONO, de la popup con ICONO.<br><br>
+                Contenido de la popup con ICONO, de la popup con ICONO, de la popup con ICONO, de la popup con ICONO.
+            </div>
+            <div class="pie-modal">
+                <p class="c-destadado3">Texto pie modal</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--WEB-->
+<div class="page-wrapper ajustalalto-contenido">
+    
+    <header class="fontop">
+        <!--Zona logo y menu -->
+
+        <!-- Fin Zona logo y menu -->
+    </header>
+    
+    <!-- Zona Separa de Menu -->
+ 
+
+    <!-- 
+    #################
+    INICIO CONTENIDO
+    ################# 
+    -->
+
+
+    <style type="text/css">
+      .fsize { font-size: 0.8em }
+    </style>
+
+
+    <div class="contenedor">
+        <div class="fila">
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>          
+            <div class="col12">
+                <!-- &01 -->
+                <p class="center"><strong>CLASES GENERALES</strong></p>
+                <div class="separa"></div>
+            </div> 
+            <div class="col01 fsize">
+                .limpiar<br>
+                .clearfix
+            </div>
+            <div class="col02">
+                <span style="color: #000;" class="fsize">.separa</span>
+                <div class="separa" style="background-color: #e5f3ff">
+                    
+                </div>
+                
+                <span style="color: #000;" class="fsize">.separa .xs-size</span>
+                <div class="separa xs-size" style="background-color: #e5f3ff">
+                    
+                </div>
+
+                <span style="color: #000;" class="fsize">.separa .s-size</span>
+                <div class="separa s-size" style="background-color: #e5f3ff">
+                    
+                </div>
+
+                <span style="color: #000;" class="fsize">.separa .l-size</span>
+                <div class="separa l-size" style="background-color: #e5f3ff">
+                    
+                </div>
+
+                <span style="color: #000;" class="fsize">.separa .xl-size</span>
+                <div class="separa xl-size" style="background-color: #e5f3ff">
+                    
+                </div>
+
+                <span style="color: #000;" class="fsize">.separa .xxl-size</span>
+                <div class="separa xxl-size" style="background-color: #e5f3ff">
+                    
+                </div>
+
+
+                <div class="separa"></div>
+            </div>   
+            <div class="col03">
+                <div class="fila fsize">
+                    <div class="col12">
+                        <div class="izq " style="background-color: #e5f3ff">
+                            .izq
+                        </div>
+                        <div class="der " style="background-color: #e5f3ff">
+                            .der
+                        </div>
+                    </div>
+                    <div class="col12"><div class="separa"></div></div>
+                    <div class="col04">
+
+                        <div style="background-color: #ffdeb0; height: 5px; width: 100%"></div>
+                        <div class="septop " style="background-color: #e5f3ff">
+                            .septop
+                        </div>
+                    </div>
+                    <div class="col04">
+                        <div class="sepbot " style="background-color: #e5f3ff">
+                            .sepbot
+                        </div>
+                        <div style="background-color: #ffdeb0; height: 5px; width: 100%"></div>
+                    </div>
+                    <div class="col04">
+                        <div style="background-color: #ffdeb0; height: 5px; width: 100%"></div>
+                        <div class="septopbot " style="background-color: #e5f3ff">
+                            .septopbot
+                        </div> 
+                        <div style="background-color: #ffdeb0; height: 5px; width: 100%"> </div>                   
+                    </div>
+                    <div class="col12"><div class="separa"></div></div>   
+                    <div class="col06">
+                        <div style="background-color: #ffdeb0; height: 5px; width: 100%"></div>
+                        <div class="septopmin " style="background-color: #e5f3ff">
+                            .septopmin
+                        </div>
+                    </div> 
+                    <div class="col06">
+                        <div style="background-: #ffdeb0; height: 5px; width: 100%"></div>
+                        <div class="septopeq fsize" style="background-color: #e5f3ff">
+                            .septopeq
+                        </div>
+                    </div>  
+                    <div class="col12"><div class="separa"></div></div>  
+                    <div class="col06">
+                        <div style="background-color: #ffdeb0; width: 5px; height: 15px ; display: inline-block;"></div>
+                        <div class="sepizq " style="background-color: #e5f3ff; display: inline-block;">
+                            .sepizq
+                        </div>
+                    </div>
+                    <div class="col06">
+                        <div class="sepder " style="background-color: #e5f3ff; display: inline-block;">
+                            .sepder
+                        </div>
+                        <div style="background-color: #ffdeb0; width: 5px; height: 15px ; display: inline-block;"></div>                        
+                    </div> 
+                    <div class="col12"><div class="separa"></div></div>  
+                    <div class="col12 left ">
+                        .left
+                    </div>    
+                    <div class="col12 center ">    
+                        .center
+                    </div>
+                    <div class="col12 right ">
+                        .right
+                    </div>                                                     
+                </div>
+                
+            </div> 
+            <div class="col03">
+                <div class="fsize">
+                  <div class="paddinglados" style="background-color: #e5f3ff; display: inline-block;">
+                      .paddinglados
+                  </div>
+                  <div class="paddingarribabajo" style="background-color: #e5f3ff; display: inline-block;">
+                      .paddingarribabajo
+                  </div>
+                  <div class="separa"></div>
+                  <div class="justificado full">.justificado justifica texto dentro de todo el párrafo.</div>
+                  <div class="separa"></div>
+                  <div>.enlinea .enbloque .flex</div>
+                  <div class="separa"></div>
+                  <div class="centrado" style="background-color: #e5f3ff; width: 100px ">.centrado</div>
+                  <div class="separa"></div>
+                  <div class="flex relative" style="height: 100px; border: 1px solid grey">
+                      <div class="absolute" style="top: -14px; left: -16">.flex</div>
+                      <div class="centradovertical">.centradovertical</div>
+                  </div>
+                  <div class="separa"></div>
+                  Con <span class="mark">.mark</span> marcas un texto.
+                </div>
+            </div>
+            <div class="col03 fsize">
+                <div class="fila">
+                    <div class="col06">.overflow-auto</span></div>
+                    <div class="col06">.overflow-hidden</span></div>
+                    <div class="col06">.position-static</span></div>
+                    <div class="col06">.position-relative</span></div>
+                    <div class="col06">.position-absolute</span></div>
+                    <div class="col06">.position-fixed</span></div>
+                    <div class="col06">.position-fixed</span></div>
+                    <div class="col06">.position-sticky</span></div>
+                    <div class="col06">.fixed-top</span></div>
+                    <div class="col06">.fixed-bottom</span></div>
+                    <div class="col06">.relative</span></div>
+                    <div class="col06">.absolute</span></div>
+                    <div class="col06">.nodisplay</span></div>
+                </div>
+
+                <div class="separa s-size"></div>
+
+                <span class="tachado">.tachado</span> <span class="bold">.bold</span> <span class="mayusculas">.mayusculas </span><span class="italic"> .italic</span>
+
+                <div class="separa s-size"></div>
+                <div class="elipsis">.elipsis (Esta es una caja a la que le hemos colocado la clase elipsis)</div>
+                <div class="separa s-size"></div>
+                <div class="help">.help (Pon cursor encima)</div>
+                <div class="cursor-zoom">.cursor-zoom (Pon cursor encima)</div>
+                <div class="cursor-click">.cursor-click (Pon cursor encima)</div>
+                <div class="separa s-size"></div>
+
+                <div class="fila">
+                    <div class="col06"><span>.noheigh</span></div>
+                    <div class="col06"><span>.nobold</span></div>
+                    <div class="col06"><span>.nomargin</span></div>
+                    <div class="col06"><span>.nopadding</span></div>
+                </div>                
+
+
+                <div class="linea footer"></div>
+            </div>
+            <div class="col04">
+                .linea
+                <div class="linea"></div>
+            </div>
+            <div class="col04" style="background-color: black; color: grey">
+                .linea.footer
+                <div class="linea footer" style="background-color: rgba(255,255,255,0.16)"></div>
+            </div>
+            <div class="col04">
+                .linea.notop
+                <div class="linea notop"></div>
+            </div>
+            <div class="col04">
+                .linea.l-size
+                <div class="linea l-size"></div>
+            </div>
+            <div class="col04">
+                .linea.s-size
+                 <div class="linea s-size"></div>
+            </div>
+            <div class="col04">
+            </div>
+            <div class="col12">
+                <div class="separa"></div>
+            </div>
+            <div class="col04">
+              <div class="fila">
+                  <div class="col04">
+                      <div style="width: 100px; height: 30px; background-color: #bfbfbf; font-size: 0.7em" class="redondo">.rendondo</div>
+                  </div>
+                  <div class="col04">
+                      <div style="width: 100px; height: 70px; background-color: #bfbfbf;font-size: 0.7em" class="redondo borde-s-size">.rendondo<br>.borde-s-size</div>
+                  </div>
+                  <div class="col04">
+                      <div style="width: 100px; height: 70px; background-color: #bfbfbf;font-size: 0.7em" class="redondo borde-xl-size">.rendondo<br>.borde-xl-size</div>
+                  </div>
+              </div>
+            </div>
+            <div class="col04">
+                <div class="fila">
+                    <div class="col03">
+                        <div style="width: 90px; height: 30px; background-color: #bfbfbf; font-size: 0.7em" class="redondo-top">.rendondo-top</div>
+                    </div>
+                    <div class="col03">
+                        <div style="width: 90px; height: 30px; background-color: #bfbfbf; font-size: 0.7em" class="redondo-bottom">.rendondo-bottom</div>
+                    </div>
+                    <div class="col03">
+                        <div style="width: 90px; height: 30px; background-color: #bfbfbf; font-size: 0.7em" class="redondo-right">.rendondo-right</div>
+                    </div>
+                    <div class="col03">
+                        <div style="width: 90px; height: 30px; background-color: #bfbfbf; font-size: 0.7em" class="redondo-left">.rendondo-left</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col04">
+                <div class="fila">
+                    <div class="col08">
+                        <img src="images/sticker-avatar.jpg" style="width: 60px; height: 60px" class="post-imagen">
+                        <div class="post-texto">.post-imagen<br>.post-texto</div>
+                    </div>
+                    <div class="col04">
+                        <img src="images/sticker-avatar.jpg" style="width: 60px; height: 60px" class="imgborde"><br>
+                        <span style="font-size: 0.7em">.imgborde</span>
+                    </div>  
+                </div>
+            </div>
+            <div class="col12">
+                <div class="separa"></div>
+            </div>
+
+            
+
+            
+            <div class="col12"><div class="separa"></div><div class="separa"></div></div>  
+            <div class="col12">
+                <!-- &01 -->
+                <p class="center"><strong>COLORES</strong></p>
+                <div class="separa"></div>
+            </div>  
+            <div class="col12">
+                <p>Colores identidad de la web, textos y fondos:</p>
+            </div>  
+            <div class="col02">
+                <div class="colordest" style=" text-align: center">
+                    .colordest
+                </div>
+            </div>      
+             <div class="col02">
+                <div class="fondo-colordest" style=" text-align: center">
+                    .fondo-colordest
+                </div>
+            </div>    
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+            <div class="col12">
+                <p>Colores básicos texto (color:):</p>
+            </div>  
+            <div class="col02">
+                <div style="text-align: center">
+                    <span class="negro">.negro</span>
+                </div>
+            </div>      
+            <div class="col02">
+                <div style="text-align: center; ">
+                    <span class="blanco">.blanco</span>
+                </div>
+            </div>      
+            <div class="col02">
+                <div style=" text-align: center">
+                    <span class="rojo">.rojo</span>
+                </div>
+            </div>  
+            <div class="col02">
+                <div style=" text-align: center">
+                    <span class="verde">.verde</span>
+                </div>
+            </div>      
+            <div class="col02">
+                <div style=" text-align: center">
+                    <span class="gris">.gris</span>
+                </div>
+            </div>      
+            <div class="col02">
+                <div style="text-align: center">
+                    <span class="amarillo">.amarillo</span>
+                </div>
+            </div>  
+            <div class="col02">
+                <div style="text-align: center">
+                    <span class="azul">.azul</span>
+                </div>
+            </div>                  
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+ 
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <div class="fila">
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+        </div>
+    </div>       
+
+  <div class="contenedor">
+        <div class="fila">
+            <div class="col12">
+                <!-- &03 -->
+                <p class="center"><strong>LINKS Y BOTONES</strong></p>
+                <div class="separa"></div>
+            </div>
+            <div class="col12">
+                <a href="" class="botoncir">.botoncir - Boton circular</a>
+
+                <a href="" class="botoncir-vert">VER MÁS</a>
+                 <a href="" class="botoncir-vert img-rounded">VER MÁS</a>
+
+                <br><br>
+                <a href="" class="boton img"><img src="images/ico-email.svg" style="width: 24px; margin-bottom: 1px" class="sepder">EMAIL</a>
+                <a href="" class="boton img"><img src="images/ico-gmail.svg" style="width: 24px; margin-bottom: 1px" class="sepder">GMAIL</a>
+                <a href="" class="boton img"><img src="images/ico-outlook.svg" style="width: 24px; margin-bottom: 1px" class="sepder">OUTLOOK</a>
+                <a href="" class="boton img"><img src="images/ico-ymail.svg" style="width: 24px; margin-bottom: 1px" class="sepder">YAHOOMAIL</a>
+                <a href="" class="boton img"><img src="images/ico-icloud.svg" style="width: 24px; margin-bottom: 1px" class="sepder">ICLOUD</a>
+        
+                <br> <br>       
+                <a href="" class="subrayar">Enlace con linea animada</a>
+
+                <div class="separa"></div>
+
+                <a class="boton colordest hvr-grow" href="#">Botón crece</a>
+                <a class="boton colordest hvr-shrink" href="#">Botón encoje</a>
+                <a class="boton colordest hvr-wobble-vertical" href="#">Botón wobble vertical</a>
+                <a class="boton colordest hvr-wobble-horizontal" href="#">Botón wobble horizontal</a>
+              
+                <div class="separa"></div>
+
+                <a class="grad-link" href="#">Enlace cambia suave</a>
+                <div class="multiple"><a href="#">Enlace cambia fondo suave</a></div>
+
+            </div>
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+
+
+            <div class="col12">
+                <a href="#" class="boton cerrar negro"><span class="flaticon-equis c-blanco"></span></a>
+                <a href="#" class="boton cerrar rojo"><span class="flaticon-equis c-blanco"></span></a>
+            </div>   
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+
+         
+            <div class="col06">
+                <div class="separa3"></div>
+                <!-- &23 -->
+                <p class="center"><strong>COLAPSE (solo con CSS)</strong></p>
+                <div class="separa"></div>                
+                <!-- Inicio -->
+                <div class="collapse">
+                    <ul class="collapse-list">
+                        <li>
+                            <label class="collapse-btn" for="collapse-1">Lorem ipsum dolor sit amet</label>
+                            <input class="collapse-open" type="checkbox" id="collapse-1" aria-hidden="true" hidden="">
+                            <div class="collapse-painel">
+                                <div class="collapse-inner">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="collapse-btn" for="collapse-2">Lorem ipsum dolor sit amet</label>
+                            <input class="collapse-open" type="checkbox" id="collapse-2" aria-hidden="true" hidden="">
+                            <div class="collapse-painel">
+                                <div class="collapse-inner">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="collapse-btn" for="collapse-3">Lorem ipsum dolor sit amet</label>
+                            <input class="collapse-open" type="checkbox" id="collapse-3" aria-hidden="true" hidden="">
+                            <div class="collapse-painel">
+                                <div class="collapse-inner">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Fin -->
+            </div>
+
+        
+            <div class="col06">
+                <div class="separa3"></div>
+                <!-- &23 -->
+                <p class="center"><strong>COLAPSE ACORDEON (solo con CSS)</strong></p>
+                <div class="separa"></div>                
+                <!-- Inicio -->
+                <div class="collapse">
+                    <ul class="collapse-list">
+                        <li>
+                            <label class="collapse-btn" for="accordion-1">Lorem ipsum dolor sit amet</label>
+                            <input class="collapse-open" type="radio" id="accordion-1" name="accordion" aria-hidden="true" hidden checked />
+                            <div class="collapse-painel">
+                                <div class="collapse-inner">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="collapse-btn" for="accordion-2">Lorem ipsum dolor sit amet</label>
+                            <input class="collapse-open" type="radio" id="accordion-2" name="accordion" aria-hidden="true" hidden  />
+                            <div class="collapse-painel">
+                                <div class="collapse-inner">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="collapse-btn" for="accordion-3">Lorem ipsum dolor sit amet</label>
+                            <input class="collapse-open" type="radio" id="accordion-3" name="accordion" aria-hidden="true" hidden  />
+                            <div class="collapse-painel">
+                                <div class="collapse-inner">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, non.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Fin -->
+            </div>
+
+            <div class="col12">
+                <div class="separa3"></div>
+                <!-- &10 -->
+                <p class="center"><strong>LISTADOS NÚMEROS DECORADOS</strong></p>
+                <div class="separa"></div>      
+            </div>
+
+            <div class="col12">
+                <div class="separa3"></div>
+
+                <ol class="numbered-list">
+                  <li>Primero</li>
+                  <li>Segundo</li>
+                  <li>Tercero</li>
+                </ol>
+
+                <div class="separa"></div>                  
+            </div>
+
+            <div class="col06">
+                <div class="separa3"></div>
+                <!-- &10 -->
+                <p class="center"><strong>REDES SOCIALES</strong></p>
+                <div class="separa"></div>                
+                <!-- Inicio -->
+                <ul class="social-icons">
+                    <li><a class="facebook"><span class="flaticon-facebook-ico sepder"></span>Facebook</a></li>
+                    <li><a class="twitter"><span class="flaticon-twitter-ico sepder"></span>Twitter</a></li>
+                    <li><a class="youtube"><span class="flaticon-youtube-ico sepder"></span>Youtube</a></li>
+                    <li><a class="linkedin"><span class="flaticon-linkedin-ico sepder"></span>Linkedin</a></li>
+                    <li><a class="vimeo"><span class="flaticon-vimeo-ico sepder"></span>Vimeo</a></li>
+                    <li><a class="whatsapp"><span class="flaticon-whatsapp-ico sepder"></span>Whatsapp</a></li>
+                    <li><a class="pinterest"><span class="flaticon-pinterest-ico sepder"></span>Pinterest</a></li>
+                    <li><a class="instagram"><span class="flaticon-instagram-ico sepder"></span>Instagram</a></li>
+                    <li><a class="flickr"><span class="flaticon-flickr-ico sepder"></span>Flickr</a></li>
+                    <li><a class="rss"><span class="flaticon-rss-ico sepder"></span>RSS</a></li>
+                    <li><a class="paypal"><span class="flaticon-paypal-ico sepder"></span>Paypal</a></li>
+                    <li><a class="telegram"><span class="flaticon-telegram sepder"></span>Telegram</a></li>
+                </ul>
+                <!-- Fin -->
+            </div>               
+ 
+            <div class="col06">
+                <div class="separa3"></div>
+                <!-- &11 -->
+                <p class="center"><strong>ETIQUETAS</strong></p>
+                <div class="separa"></div>                
+                <a href="" class="etiqueta rojo sombra ">Etiqueta</a>
+                <a href="" class="etiqueta verde sombra ">Etiqueta</a>
+                <a href="" class="etiqueta azul sombra ">Etiqueta</a>
+                <a href="" class="etiqueta gris sombra ">Etiqueta</a>
+                <a href="" class="etiqueta fondo-colordest sombra ">Etiqueta</a>
+                <div class="etiqueta cerrar gris sombra ">Etiqueta <a href=""><i class="flaticon-cerrar c-blanco"></i></a></div>
+
+                <div class="separa"></div>
+
+                <a href="" class="etiqueta fina rojo sombra ">Etiqueta</a>
+                <a href="" class="etiqueta fina verde sombra ">Etiqueta</a>
+                <a href="" class="etiqueta fina azul sombra ">Etiqueta</a>
+                <a href="" class="etiqueta fina gris sombra ">Etiqueta</a>
+                <a href="" class="etiqueta fina fondo-colordest sombra ">Etiqueta</a>
+                <div class="etiqueta fina cerrar gris sombra ">Etiqueta <a href=""><i class="flaticon-cerrar c-blanco"></i></a></div>
+
+                <div class="separa"></div>
+
+                <a href="" class="etiqueta rojo bordebot sombra "><span class="flaticon-etiqueta sepder"></span>Etiqueta</a>
+                <a href="" class="etiqueta verde bordebot sombra "><span class="flaticon-etiqueta sepder"></span>Etiqueta</a>
+                <a href="" class="etiqueta bordebot azul  sombra "><span class="flaticon-etiqueta sepder"></span>Etiqueta</a>
+                <a href="" class="etiqueta bordebot gris sombra "><span class="flaticon-etiqueta sepder"></span>Etiqueta</a>
+                <a href="" class="etiqueta bordebot colordest sombra "><span class="flaticon-etiqueta sepder"></span>Etiqueta</a>
+            </div>  
+
+            <div class="col06">
+                <div class="separa"></div>
+                <!-- &12 -->
+                <p class="center"><strong>AVISOS EN PUNTO</strong></p>
+                <div class="separa"></div>
+
+                <p class="relative enlinea">Punto de aviso
+                    <span class="aviso-pt"></span>
+                </p>
+                <br>
+                <p class="relative enlinea">Punto de aviso numeros
+                    <span class="aviso-pt num">123</span>
+                </p>
+                <br>
+                <p class="relative enlinea">Punto de aviso numeros grandes
+                    <span class="aviso-pt numbig">423</span>
+                </p> 
+            </div>
+       
+            <div class="col12">
+                <div class="separa"></div>
+                <!-- &13 -->
+                <p class="center"><strong>BOTON CON DATOS</strong></p>
+                <div class="separa"></div>
+            </div>   
+
+            <div class="col12">
+                <a class="btn-datos">
+                    <span>
+                        <i class="flaticon-eye"></i>Botón
+                    </span>
+                    <span>356</span>
+                </a>
+                <a class="btn-datos fblanco">
+                    <span>
+                        <i class="flaticon-like"></i>Me gusta
+                    </span>
+                    <span>356</span>
+                </a>
+                <a class="btn-datos fgris">
+                    <span>
+                        <i class="flaticon-like"></i>Me gusta
+                    </span>
+                    <span>356</span>
+                </a>
+                <a class="btn-datos fblanco">
+                    <span>
+                        <i class="flaticon-exclamacion"></i>Atención
+                    </span>
+                </a>
+            </div>
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div> 
+
+            <div class="col12">
+                <a class="btn-datos fverde">
+                    <span>
+                        <i class="flaticon-eye"></i>Botón
+                    </span>
+                    <span>356</span>
+                </a>
+                <a class="btn-datos fazul">
+                    <span>
+                        <i class="flaticon-like"></i>Me gusta
+                    </span>
+                    <span>356</span>
+                </a>
+                <a class="btn-datos fnaranja">
+                    <span>
+                        <i class="flaticon-like"></i>Me gusta
+                    </span>
+                    <span>356</span>
+                </a>
+                <a class="btn-datos fnegro">
+                    <span>
+                        <i class="flaticon-exclamacion"></i>Atención
+                    </span>
+                </a>
+            </div>          
+
+            <!-- &22 -->
+            <div class="col12">
+                <div class="separa"></div>
+
+                <a href="" class="btn-ico">
+                    <span class="relative">
+                        <span style="">
+                            <i class="flaticon-like"></i>
+                        </span>
+                        <span style="">
+                            <span class="ico-fder"></span>
+                            Texto botón</span>
+                    </span>
+                </a>    
+                &nbsp
+                <a href="" class="btn-ico f-rojo">
+                    <span class="relative">
+                        <span style="">
+                            <i class="flaticon-like"></i>
+                        </span>
+                        <span style="">
+                            <span class="ico-fder"></span>
+                            Texto botón</span>
+                    </span>
+                </a>    
+                &nbsp
+                <a href="" class="btn-ico f-azul">
+                    <span class="relative">
+                        <span style="">
+                            <i class="flaticon-like"></i>
+                        </span>
+                        <span style="">
+                            <span class="ico-fder"></span>
+                            Texto botón</span>
+                    </span>
+                </a>    
+                &nbsp
+
+                <a href="" class="btn-ico f-verde">
+                    <span class="relative">
+                        <span style="">
+                            <i class="flaticon-like"></i>
+                        </span>
+                        <span style="">
+                            <span class="ico-fder"></span>
+                            TEXTO BOTON</span>
+                    </span>
+                </a>                            
+                &nbsp
+
+                <a href="" class="btn-ico f-amarillo">
+                    <span class="relative">
+                        <span style="">
+                            <i class="flaticon-like"></i>
+                        </span>
+                        <span style="">
+                            <span class="ico-fder"></span>
+                            texto botón</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="col12">
+                <div class="separa"></div>
+                <p class="center"><strong>CALENDARIO</strong></p>
+                <div class="separa"></div>
+            </div>  
+
+            <div class="col06">
+            	<div class="separa"></div>
+
+            	<!-- Inicio -->
+            	<table class="calendar" summary="Calendario mensual">
+					<caption class="fondo-colordest blanco">
+						<a href="index.htm" class="izq" title="Anterior" style="font-size: 1.154em">«</a>
+						<a href="index.htm" class="der" title="Siguiente" style="font-size: 1.154em">»</a>
+						Septiembre 2019
+					</caption>
+					
+					 <tbody>
+					 	<tr class="calendar blanco">
+							<th class=" negro" scope="col" abbr="Luns" title="Lunes">Lu</th>
+							<th class=" negro" scope="col" abbr="Martes" title="Martes">Ma</th>
+							<th class=" negro" scope="col" abbr="Mércores" title="Miércores">Mi</th>
+							<th class=" negro" scope="col" abbr="Xoves" title="Jueves">Ju</th>
+							<th class=" negro" scope="col" abbr="Venres" title="Viernes">Vi</th>
+							<th class=" negro" scope="col" abbr="Sábado" title="Sábado">Sa</th>
+							<th class=" negro" scope="col" abbr="Domingo" title="Domingo">Do</th>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td class="hoy"><a href="detalle.htm">6</a></td>
+							<td>7</td>
+							<td>8</td>
+							<td>9</td>
+							<td><a href="detalle.htm" class="activa">10</a></td>
+							<td>11</td>
+							<td>12</td>
+						</tr>
+						<tr>
+							<td><a href="detalle.htm">13</a></td>
+							<td>14</td>
+							<td>15</td>
+							<td>16</td>
+							<td>17</td>
+							<td>18</td>
+							<td><a href="detalle.htm">19</a></td>
+						</tr>
+						<tr>
+							<td style="height: 36px">20</td>
+							<td style="height: 36px">21</td>
+							<td style="height: 36px">22</td>
+							<td style="height: 36px"><a href="listado.htm">23</a></td>
+							<td style="height: 36px">24</td><td style="height: 36px">25</td>
+							<td style="height: 36px">26</td>
+						</tr>
+						<tr>
+							<td>27</td>
+							<td>28</td>
+							<td>29</td>
+							<td>30</td>
+							<td>31</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- Fin -->
+
+            </div>
+
+			<div class="col06">
+				<div class="separa"></div>
+
+				<!-- Inicio -->
+				<table class="calendar" summary="Calendario mensual">
+
+					<caption class="fondo-colordest blanco">
+						<a href="index.htm" class="izq" title="Anterior" style="font-size: 1.154em">«</a>
+						<a href="index.htm" class="der" title="Siguiente" style="font-size: 1.154em">»</a>
+						2019
+					</caption>
+					
+					<tbody>
+						 <tr>
+							<td><a href="">ENE</a></td>
+							<td><a href="">FEB</a></td>
+							<td><a href="">MAR</a></td>
+							<td><a href="">ABR</a></td>
+						 </tr>
+						 
+						 <tr>
+							<td><a href="">MAY</a></td>
+							<td><a href="">JUN</a></td>
+							<td><a href="">JUL</a></td>
+							<td><a href="">AGO</a></td>
+						 </tr>
+						 
+						 <tr>
+							<td class="hoy"><a href="">SEP</a></td>
+							<td><a href="">OCT</a></td>
+							<td><a href="">NOV</a></td>
+							<td><a href="">DIC</a></td>
+						 </tr>
+					</tbody>
+				</table>
+				<!-- Fin -->
+
+            </div>
+
+            <div class="col12">
+              <div class="separa"></div>
+              <p class="center"><strong>TABLAS</strong></p>
+              <div class="separa"></div>
+            </div>
+
+            <style type="text/css">
+              .box-table { width: 100%; padding: 15px 0; }
+              table.cebra {width: 100%; background-color: #fff; text-align: left;}
+              table.cebra th, td{ padding: 15px }
+              table.cebra tbody tr:nth-child(2n+1) td { background-color: #eee }
+              th.degC { position: relative; }
+              th.degC span { position: absolute; bottom: 57px; left:-15px; transform: rotate(-60deg);width: 150px}
+
+              table.cebra.invert {width: 100%; background-color: #ffffff00; text-align: left;}
+
+
+            </style>
+
+            <div class="col06">
+              <div class="box-table">
+                <table class="cebra">
+                  <thead>
+                    <tr>
+                      <th>Country</th>
+                      <th>Area</th>
+                      <th>Population</th>
+                      <th>Number</th>
+                      <th>Capital</th>
+                      <th><span>Titulo estrecho</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Austria</td>
+                    <td>83,858</td>
+                    <td>8,169,929</td>
+                    <td>339</td>
+                    <td>Vienna</td>
+                    <td>1.21</td>
+                  </tr>
+                  <tr>
+                    <td>Belgium</td>
+                    <td>30,528</td>
+                    <td>11,007,000</td>
+                    <td>410</td>
+                    <td>Brussels</td>
+                    <td>23.1</td>
+                  </tr>
+                  <tr>
+                    <td>Denmark</td>
+                    <td>43,094</td>
+                    <td>5,564,219</td>
+                    <td>271</td>
+                    <td>Copenhagen</td>
+                    <td>0.345</td>
+                  </tr>
+                  <tr>
+                    <td>Belgium</td>
+                    <td>30,528</td>
+                    <td>11,007,000</td>
+                    <td>410</td>
+                    <td>Brussels</td>
+                    <td>23</td>
+                  </tr>
+                </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col06">
+
+              <div class="box-table centrado" style="width: 100%">
+                <table class="cebra invert centrado"  style="width: 100%">
+                  <thead>
+                    <tr style="height: 50px">
+                      <th class="degC"><span>Country</span></th>
+                      <th class="degC"><span>Area</span></th>
+                      <th class="degC"><span>Population</span></th>
+                      <th class="degC"><span>Number</span></th>
+                      <th class="degC"><span>Capital</span></th>
+                      <th class="degC"><span>Coeficiente</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>23</td>
+                    <td>2</td>
+                    <td>8,1</td>
+                    <td>339</td>
+                    <td>5</td>
+                    <td>1.2</td>
+                  </tr>
+                  <tr>
+                    <td>34</td>
+                    <td>30</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>43</td>
+                    <td>23.1</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>43</td>
+                    <td>5,5</td>
+                    <td>271</td>
+                    <td>8</td>
+                    <td>0.3</td>
+                  </tr>
+                  <tr>
+                    <td>90</td>
+                    <td>30</td>
+                    <td>1</td>
+                    <td>410</td>
+                    <td>3</td>
+                    <td>23</td>
+                  </tr>
+                </tbody>
+                </table>
+              </div>
+
+            </div>
+
+            
+            
+            <div class="col06">
+                <div class="separa"></div>
+                <p class="center"><strong>ANIMA CUALQUIER CONTENEDOR con :hover</strong></p>
+                <div class="separa"></div>
+                    
+                <div style="width: 120px; height: 100px; background-color: #ff6000; margin-right: 5px; display: inline-block;" class="agranda">
+                    <p class="blanco full center">.agranda</p>
+                </div>
+                <div style="width: 120px; height: 100px; background-color: #ff6000; margin-right: 5px; display: inline-block;" class="encoje">
+                    <p class="blanco full center">.encoje</p>
+                </div>
+                <div style="width: 120px; height: 100px; background-color: #ff6000; margin-right: 5px; display: inline-block;" class="agranda blur">
+                    <p class="blanco full center">.agranda .blur</p>
+                </div>
+                <div style="width: 120px; height: 100px; background-color: #ff6000; margin-right: 5px; display: inline-block;" class="encoje blur">
+                    <p class="blanco full center">.encoje .blur</p>
+                </div>                  
+                <div style="width: 120px; height: 100px; background-color: #ff6000; margin-right: 5px; display: inline-block;" class="glow">
+                    <p class="blanco full center">.glow</p>
+                </div>
+                <div class="separa"></div>
+                <div style="width: 120px; height: 100px; background-color: #ff6000; margin-right: 5px; display: inline-block; overflow: hidden; font-size: 0.8em; color:#fff; text-align: center" >
+                    .filtro-gris
+                    <img src="images/sample-foto.jpg" class="filtro-gris img-responsive" style="">
+                </div>  
+                <div style="width: 120px; height: 100px; background-color: #ff6000; margin-right: 5px; display: inline-block; overflow: hidden; font-size: 0.8em; color:#fff; text-align: center" >
+                    .filtro-color
+                    <img src="images/sample-foto.jpg" class="filtro-color img-responsive" style="">
+                </div>  
+                <div class="separa"></div>
+                    
+            </div>
+
+            <div class="col06">
+                <div class="separa"></div>
+                <p class="center"><strong>EFECTOS ANIMACION</strong></p>
+                <div class="separa"></div>
+
+                <div style="color: #003846;background-color: #2bc8ef; display: inline-block; " class="blink05">&nbsp .blink05 &nbsp </div>
+                <div style="color: #003846;background-color: #2bc8ef; display: inline-block; " class="blink1">&nbsp .blink1 &nbsp </div>
+                <div style="color: #003846;background-color: #2bc8ef; display: inline-block; " class="blink2">&nbsp .blink2 &nbsp </div>
+                <div style="color: #003846;background-color: #2bc8ef; display: inline-block; " class="blink3">&nbsp .blink3 &nbsp </div>
+                <div style="color: #003846;background-color: #2bc8ef; display: inline-block; " class="blink4">&nbsp .blink4 &nbsp </div>
+                <div class="separa"></div>
+                <div style="color: #003846;background-color: #2bc8ef; display: inline-block; " class="blk-spand02">&nbsp .blk-spand02 &nbsp </div>
+                <div style="color: #003846;background-color: #2bc8ef; display: inline-block; " class="blk-spand05">&nbsp .blk-spand05 &nbsp </div>
+                <div style="color: #003846;background-color: #2bc8ef; display: inline-block; " class="blk-spand1">&nbsp .blk-spand1 &nbsp </div>
+            </div>                  
+
+            <div class="col06">
+                <div class="separa"></div>
+                <p class="center"><strong>MENU DESPLEGABLE</strong></p>
+                <div class="separa"></div>
+
+                <!-- Inicio -->
+                <div class="relative enlinea">
+                    <a class="link-dropdownmenu" href="javascript:muestra_oculta_id('idioma')"><img src="images/flags/es.png"><i class="triangulo"></i></a>
+                    <ul class="dropdown-menu" id="idioma">
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img src="images/flags/ge.png" alt="Idioma"> Deutsch</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img src="images/flags/en.png" alt="Idioma"> English</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace activo" href=""><img src="images/flags/es.png" alt="Idioma"> Español</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img src="images/flags/fr.png" alt="Idioma"> Français</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img src="images/flags/en.png" alt="Idioma"> Italiano</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img src="images/flags/pl.png" alt="Idioma"> Polski</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img src="images/flags/po.png" alt="Idioma"> Portugues</a>
+                        </li>   
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img src="images/flags/ru.png" alt="Idioma"> Русский</a>
+                        </li>                                               
+                    </ul>
+                </div>  
+                <!-- Fin -->
+
+                <div class="enlinea sepder"></div>
+
+                <!-- Inicio (con imágenes SVG) -->
+                <div class="relative enlinea">
+                    <a class="link-dropdownmenu" href="javascript:muestra_oculta_id('idioma2')"><img class="dropdown-menu-imagen--size" src="images/flags/es.svg"><i class="triangulo"></i></a>
+                    <ul class="dropdown-menu" id="idioma2">
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img class="dropdown-menu-imagen--size" src="images/flags/ge.svg" alt="Idioma"> Deutsch</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img class="dropdown-menu-imagen--size" src="images/flags/en.svg" alt="Idioma"> English</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace activo" href=""><img class="dropdown-menu-imagen--size" src="images/flags/es.svg" alt="Idioma"> Español</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img class="dropdown-menu-imagen--size" src="images/flags/fr.svg" alt="Idioma"> Français</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img class="dropdown-menu-imagen--size" src="images/flags/it.svg" alt="Idioma"> Italiano</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img class="dropdown-menu-imagen--size" src="images/flags/pl.svg" alt="Idioma"> Polski</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img class="dropdown-menu-imagen--size" src="images/flags/po.svg" alt="Idioma"> Portugues</a>
+                        </li>   
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href=""><img class="dropdown-menu-imagen--size" src="images/flags/ru.svg" alt="Idioma"> Русский</a>
+                        </li>                                               
+                    </ul>
+                </div>  
+                <!-- Fin -->
+
+                <div class="enlinea sepder"></div>
+
+                <!-- Inicio -->
+                <div  class="relative enlinea"> 
+                    <a href="javascript:muestra_oculta_id('despliega')">Texto con desplegable <i class="triangulo"></i></a>
+                    <ul class="dropdown-menu" id="despliega">
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href="">Opción 1</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href="">Opción 2</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href="">Opción 3</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href="">Opción 4</a>
+                        </li>
+                        <li class="dropdown-menu-opc">
+                            <a class="dropdown-menu-enlace" href="">Opción 5</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Fin -->
+
+                <div class="enlinea sepder"></div>
+
+                <!-- Inicio -->
+                <div  class="relative enlinea"> 
+                    <a href="javascript:muestra_oculta_id('cajalogin')">Login <i class="triangulo"></i></a>
+                    <div id="cajalogin" class="caja-simple"  style="position: absolute; top:22px; right: 0; display: none; z-index: 1000; min-width: 300px">
+
+                        <!-- Login -->
+                        <form style=" font-size: 0.9em; background-color: #fff;">
+                            <input class="formulario full"  style="border: 1px solid #ccc; border-radius: 15px" type="text" value="Email válido">
+                            <div class="limpiar"></div>
+                            <div class="ico-campo">
+                                <span class="flaticon-eye"></span>
+                            </div>
+                            <input class="formulario full"  class="formulario" style="border: 1px solid #ccc; border-radius: 15px " type="password" value="Contraseña">
+                            <div class="separa-min"></div>
+                            <input name="enviar" class="formulario boton enviar full"  style="border: 1px solid #ccc; border-radius: 15px " id="enviar" onclick="javascript:enviar_formulario('formulario_contacto')" type="button" value="Iniciar sesión">
+                            <div class="input-control checkbox enlinea sepder">
+                                <label>
+                                <input type="checkbox">
+                                <span class="check"></span>
+                                    Mantener iniciada la sesión
+                                </label>
+                            </div>
+                            <div class="limpiar"></div>
+                            <a class="btn-texto" href="#">He olvidado mi contraseña</a>
+                        </form>
+                        <!-- Fin Login -->
+                    </div>
+                </div>
+                <!-- Fin -->
+
+            </div>
+
+            <div class="col06">
+                <div class="separa"></div>
+                <p class="center"><strong>PASOS</strong></p>
+                <div class="separa"></div>
+
+                <!-- Pasos -->
+                <div class="caja-pasos">
+                    <div class="pt-pasos">
+                        <div class="pt-pasos__paso">1</div>
+                        <div class="pt-pasos__paso destacado">2</div>
+                        <div class="pt-pasos__paso">3</div>
+                        <div class="pt-pasos__paso">4</div>
+                    </div>
+                    <div class="linea-tiempo"></div>
+                </div>
+                <!-- Fin Pasos -->
+            </div>  
+
+            <div class="col12">
+
+            </div>  
+
+            <div class="col06">
+                <div class="separa"></div>
+                <!-- &22 -->
+                <p class="center"><strong>EFECTO TEXTO</strong></p>
+                <div class="separa"></div>
+
+                <div class="typewriter">
+                    <h1>Este es un texto que se escribe automaticamente</h1>
+                </div>
+            </div>  
+
+            <div class="col06">
+                <div class="separa"></div>
+                <!-- No requiere css. Usa javascript de custom.css -->
+                <p class="center"><strong>CONTADOR DE DÍGITOS</strong></p>
+                <div class="separa"></div>
+                <h1 id="activado">0</h1>
+            </div>  
+
+            <div class="col06">
+                <div class="separa"></div>
+                <!-- &17 -->
+                <p class="center"><strong>CARGA</strong></p>
+                <div class="separa"></div>
+
+                <!-- Precarga lineal -->
+                <div class="progress">
+                    <div class="indeterminate"></div>
+                </div>
+                <!-- Fin Precarga lineal -->
+
+            </div>  
+
+          
+
+            <div class="col12">
+                <div class="separa"></div>
+                <!-- &20 -->
+                <p class="center"><strong>CAJAS INFO</strong></p>
+                <div class="separa"></div>
+            </div>          
+
+            <div class="col04">
+
+                <!-- Inicio -->
+                <div class="sticker sticker-violeta ">
+                    <div>
+                        <span class="flaticon-exclamacion blanco"></span>
+                    </div>
+                    <div>
+                        <p class="c-blanco"><strong>3000</strong></p>
+                        <p class="c-blanco">Unidades de combate</p>
+                    </div>
+                </div>
+                <!-- Fin -->
+
+            </div>  
+
+            <div class="col04">
+
+                <!-- Inicio -->
+                <div class="sticker sticker-azulito ">
+                    <div>
+                        <span class="flaticon-exclamacion blanco"></span>
+                    </div>
+                    <div>
+                        <p class="c-blanco"><strong>3000</strong></p>
+                        <p class="c-blanco">Unidades de combate</p>
+                    </div>
+                </div>
+                <!-- Fin -->
+               
+            </div>  
+
+            <div class="col04">
+
+                <!-- Inicio -->
+                <div class="sticker sticker-verdito ">
+                    <div>
+                        <span class="flaticon-exclamacion blanco"></span>
+                    </div>
+                    <div>
+                        <p class="c-blanco"><strong>3000</strong></p>
+                        <p class="c-blanco">Unidades de combate</p>
+                    </div>
+                </div>
+                <!-- Fin -->
+
+            </div>      
+
+            <div class="col04">
+
+                <!-- Inicio -->
+                <div class="sticker sticker-salmon ">
+                    <div>
+                        <span class="flaticon-exclamacion blanco"></span>
+                    </div>
+                    <div>
+                        <p class="c-blanco"><strong>3000</strong></p>
+                        <p class="c-blanco">Unidades de combate</p>
+                    </div>
+                </div>
+                <!-- Fin -->
+               
+            </div>      
+
+            <div class="col04">
+
+                <!-- Inicio -->
+                <div class="sticker sticker-gris ">
+                    <div>
+                        <span class="flaticon-exclamacion blanco"></span>
+                    </div>
+                    <div>
+                        <p class="c-blanco"><strong>3000</strong></p>
+                        <p class="c-blanco">Unidades de combate</p>
+                    </div>
+                </div>
+                <!-- Fin -->
+
+            </div>  
+
+            <div class="col04">
+
+                <!-- Inicio -->
+                <div class="sticker sticker-gris ">
+                    <div style="font-size: 0">
+                        <img class="" src="images/sticker-avatar.jpg"/>
+                    </div>
+                    <div>
+                        <p class="c-blanco"><strong>3000</strong></p>
+                        <p class="c-blanco">Unidades de combate namequianas</p>
+                    </div>
+                </div>
+                <!-- Fin -->
+               
+            </div>  
+
+            <div class="col12">
+                <div class="separa3"></div>
+            </div>
+
+            <!-- Cajas info2 -->
+        	<div class="col03">
+        		<div class="cajainfo horizontal fondo-verde ">
+        			<div class="icon-hor"><i class="flaticon-badge"></i></div>
+        			<div class="descripcion-hor"><strong>11.700</strong><br>creditos disponibles</div>
+        		</div>
+        	</div>
+
+        	<div class="col03">
+        		<div class="cajainfo horizontal fondo-azul ">
+        			<div class="icon-hor"><i class="flaticon-video"></i></div>
+        			<div class="descripcion-hor"><strong>54.214</strong><br>reproducciones</div>
+        		</div>
+        	</div>
+
+        	<div class="col03">
+        		<div class="cajainfo horizontal fondo-rojo ">
+        			<div class="icon-hor"><i class="flaticon-pulgar-arriba"></i></div>
+        			<div class="descripcion-hor"><strong>234</strong><br>me gusta</div>
+        		</div>
+        	</div>
+
+        	<div class="col03">
+        		<div class="cajainfo horizontal fondo-oliva ">
+        			<div class="icon-hor"><i class="flaticon-share "></i></div>
+        			<div class="descripcion-hor"><strong>85</strong><br>veces compartido</div>
+        		</div>
+        	</div>	
+
+        	<div class="col03">
+        		<div class="cajainfo fondo-oliva">
+        			<div class="icon"><i class="flaticon-user"></i></div>
+        			<div class="description"><strong>22</strong> usuarios</div>
+        		</div>
+        	</div>
+
+        	<div class="col03">
+        		<div class="cajainfo fondo-rojo">
+        			<div class="icon"><i class="flaticon-add-user"></i></div>
+        			<div class="description"><strong>345</strong> altas</div>
+        		</div>
+        	</div>
+
+        	<div class="col03">
+        		<div class="cajainfo fondo-verde">
+        			<div class="icon"><i class="flaticon-remove-user"></i></div>
+        			<div class="description"><strong>1467</strong> bajas</div>
+        		</div>
+        	</div>
+
+        	<div class="col03">
+        		<div class="cajainfo fondo-azul">
+        			<div class="icon">
+        				<i class="flaticon-black-envelope"></i></div>
+        			<div class="description"><strong>121</strong> mensajes</div>
+        		</div>
+        	</div>
+
+            <div class="col12">
+                <div class="separa3"></div>
+                <p class="center"><strong>CAJAS</strong></p>
+                <div class="separa"></div>
+            </div>  
+
+            <div class="col04">
+
+                <!-- Inicio -->
+                <div class="caja-mensaje relative center">
+                    <p class="subtitulo"><span class="gris">TITULO <strong>PRINCIPAL</strong></span></p>
+                    <div class="separa"></div>
+                    <p class="titulo"><strong>99,99</strong><span style="font-size:0.6em"> € / mes</span></p>
+                    <div class="limpiar"></div>
+                    <a href="#" class="boton full verde redondo" title=""><strong>COMPRAR</strong></a>
+                    <span class="verdeoscuro">Titulo pie de caja</span>
+                </div>
+                <!-- Fin -->
+            </div>
+            <div class="col04">
+
+                <!-- Inicio -->
+                <div class="caja-mensaje2 sombra relative center">
+                    <p class="subtitulo"><span class="gris">TITULO <strong>PRINCIPAL</strong></span></p>
+                    <div class="separa"></div>
+                    <p class="titulo"><strong>99,99</strong><span style="font-size:0.6em"> € / mes</span></p>
+                    <div class="limpiar"></div>
+                    <a href="#" class="boton full verde" title=""><strong>COMPRAR</strong></a>
+                    <span class="verde">Titulo pie de caja</span>
+                </div>
+                <!-- Fin -->
+
+            </div>
+            <div class="col04">
+
+                <!-- Inicio -->
+                <div class="caja-simple center">
+
+                    <!-- Formulario -->
+                    <form style=" font-size: 0.9em; background-color: #fff;">
+                        <input class="formulario full" type="text" value="Email válido">
+                        <div class="limpiar"></div>
+                        <div class="ico-campo">
+                            <span class="flaticon-eye"></span>
+                        </div>
+                        <input class="formulario full"  class="formulario" type="password" value="Contraseña">
+                        <div class="separa"></div>
+                        <input name="enviar" class="formulario boton enviar full"  id="enviar" onclick="javascript:enviar_formulario('formulario_contacto')" type="button" value="Iniciar sesión">
+                        <div class="input-control checkbox enlinea sepder">
+                            <label>
+                            <input type="checkbox">
+                            <span class="check"></span>
+                                Mantener iniciada la sesión
+                            </label>
+                        </div>
+                        <div class="limpiar"></div>
+                        <a class="btn-texto" href="#">He olvidado mi contraseña</a>
+                    </form>
+                    <!-- Fin Formulario -->
+
+                </div>  
+                <!-- Fin -->
+
+            </div>
+
+            <div class="separa"></div>
+
+            <div class="col04">
+                <!-- Inicio -->
+                <div class="stitched stitched--rojo">
+                  .stitched .stitched--rojo
+                </div>
+                <!-- Fin -->
+              
+            </div>
+
+            <div class="col04">
+                <!-- Inicio -->
+                <div class="stitched stitched--gris">
+                  .stitched .stitched--gris
+                </div>
+                <!-- Fin -->
+               
+            </div>
+
+            <div class="col04">
+                <!-- Inicio -->
+                <div class="stitched stitched--verde">
+                  .stitched .stitched--verde
+                </div>
+                <!-- Fin -->
+               
+            </div>
+
+            <div class="separa"></div>
+
+            <div class="col04">
+                <!-- Inicio -->
+                <div class="tarjeta tarjeta--redondeada fondo-blanco">
+                    <h2 class="tarjeta__titulo">Titulo tarjeta redondeada</h2>
+                    <div class="tarjeta__contenido">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+                <!-- Fin -->
+            </div>
+
+            <div class="col04">
+                <!-- Inicio -->
+                <div class="tarjeta tarjeta--muyredondeada fondo-blanco">
+                    <h2 class="tarjeta__titulo">Titulo tarjeta muy rendondeada</h2>
+                    <div class="tarjeta__contenido">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+                <!-- Fin -->
+            </div>
+
+            <div class="col04">
+                <!-- Inicio -->
+                <div class="tarjeta fondo-blanco">
+                    <h2 class="tarjeta__titulo">Titulo tarjeta</h2>
+                    <div class="tarjeta__contenido">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+                <!-- Fin -->
+            </div>  
+
+            <div class="separa"></div>
+
+            <div class="col12">
+                <div class="separa3"></div>
+                <!-- &19a -->
+                <p class="center"><strong>PROGRESS BARS</strong></p>
+                <div class="separa"></div>
+            </div> 
+
+            <div class="col06">
+        		<p>Barra de progreso con etiqueta</p>
+        		<div class="progress">
+        			<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+        			    70%
+        			</div>
+        		</div>
+        		
+            	<p>Barra de progreso grande con etiqueta</p>
+            	<div class="progress big">
+            		<div class="progress-bar big" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+            		    60%
+            		</div>
+            	</div>
+
+            	<p>Barra de progreso pequeña sin etiqueta</p>
+            	<div class="progress small">
+            		<div class="progress-bar small" role="progressbar" style="width:40%"></div>
+            	</div>
+
+            	<p>1874.43 / 2 GB</p>
+            	<div class="progress mini">
+            		<div class="progress-bar mini" role="progressbar" style="width:80%"></div>
+            	</div>
+            </div>
+
+            <div class="col06">
+            	<div class="progress">
+        		  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+        		    40% Completado (success)
+        		  </div>
+        		</div>
+
+        		<div class="progress">
+        		  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+        		    50% Completado (info)
+        		  </div>
+        		</div>
+
+        		<div class="progress">
+        		  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+        		    60% Completado (warning)
+        		  </div>
+        		</div>
+
+        		<div class="progress">
+        		  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+        		    70% Completado (danger)
+        		  </div>
+        		</div>
+            </div>
+
+           <div class="col12"></div>
+
+            <div class="col06">
+            	<div class="progress">
+        		  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+        		    40% Completado (success)
+        		  </div>
+        		</div>
+        	
+            	<div class="progress">
+        		  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+        		    50% Completado (info)
+        		  </div>
+        		</div>
+
+        		<div class="progress">
+        		  <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+        		    60% Completado (warning)
+        		  </div>
+        		</div>    	
+        	
+        		<div class="progress">
+        		  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+        		    70% Completado (danger)
+        		  </div>
+        		</div>
+            </div>
+
+            <div class="col06">
+            	<div class="progress">
+        		  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+        		    40%
+        		  </div>
+        		</div>
+
+        		<div class="progress">
+        			<div class="progress-bar progress-bar-success" role="progressbar" style="width:40%; border-right:1px solid #fff">40%</div>
+        			<div class="progress-bar progress-bar-warning" role="progressbar" style="width:20%; border-right:1px solid #fff">20%</div>
+        			<div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%">30%</div>
+        		</div>
+         
+        	  	<div class="progress big">
+        			<div class="progress-bar big" role="progressbar" style="width:60%; border-right:1px solid #fff">60%</div>
+        			<div class="progress-bar big progress-bar-success" role="progressbar" style="width:40%">40%</div>
+        		</div>
+        		
+        		<div class="progress small">
+        			<div class="progress-bar small" role="progressbar" style="width:40%; border-right:1px solid #fff">&nbsp;</div>
+        			<div class="progress-bar small progress-bar-success" role="progressbar" style="width:60%">&nbsp;</div>
+        		</div>
+        		
+            </div>
+
+            <div class="col12">
+                <div class="separa"></div>
+                <p class="center"><strong>CAMPO TEXTAREA QUE CRECE</strong></p>
+                <div class="separa"></div>
+            </div> 
+
+            <div class="col03">
+                <div class="separa"></div>
+
+                <form action="#0">
+                  <label for="text">Text:</label>
+                  <div class="grow-wrap">
+                    <textarea name="text" id="text" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+                  </div>
+                </form>
+
+                <div class="separa"></div>
+            </div> 
+
+            <div class="col12">
+                <div class="separa"></div>
+                <p class="center"><strong>LISTADO HORIZONTAL IMÁGENES</strong></p>
+                <div class="separa"></div>
+            </div>  
+
+            <div class="col12">
+              
+                <div id="caja-galeria">
+                  <div class="zona-scroll">
+                    <ul>
+                        <li>
+                            <a href="images/zoom01.jpg">
+                              <img src="images/zoom01.jpg" alt="Título">
+                            </a>
+                            <a href="images/zoom01.jpg">
+                              <img src="images/zoom02.jpg" alt="Título">
+                            </a>
+                            <a href="images/zoom02.jpg">
+                              <img src="images/zoom03.jpg" alt="Título">
+                            </a>
+                            <a href="images/zoom03.jpg">
+                              <img src="images/zoom01.jpg" alt="Título">
+                            </a>
+                            <a href="images/zoom01.jpg">
+                              <img src="images/zoom01.jpg" alt="Título">
+                            </a>
+                            <a href="images/zoom01.jpg">
+                              <img src="images/zoom02.jpg" alt="Título">
+                            </a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+
+            </div>  
+
+            <div class="col12">
+                <div class="separa"></div>
+                <p class="center"><strong>LISTADO DE IMÁGENES ZOOM</strong></p>
+                <div class="separa"></div>
+            </div>
+
+            <div class="col04">
+              <article class="listado-vertical">
+                <div class="contenedor-foto">
+                  <a href="detalle-noticia.htm"><img class="img-responsive" src="images/zoom01.jpg" alt="título"></a>
+                </div>
+                <p class="txtmin"><i class="flaticon-calendario amarillo"></i> 27/10/2020</p>
+                <h2 class="titular"><a href="detalle-noticia.htm">Aquí aparece el título de una noticia relacionada con la página web</a></h2>
+              </article>
+            </div>
+
+            <div class="col04">
+              <article class="listado-vertical">
+                <div class="contenedor-foto">
+                  <a href="detalle-noticia.htm"><img class="img-responsive" src="images/zoom01.jpg" alt="título"></a>
+                </div>
+                <p class="txtmin"><i class="flaticon-calendario amarillo"></i> 27/10/2020</p>
+                <h2 class="titular"><a href="detalle-noticia.htm">Aquí aparece el título de una noticia relacionada con la página web</a></h2>
+              </article>
+            </div>
+
+            <div class="col04">
+              <article class="listado-vertical">
+                <div class="contenedor-foto">
+                  <a href="detalle-noticia.htm"><img class="img-responsive" src="images/zoom01.jpg" alt="título"></a>
+                </div>
+                <p class="txtmin"><i class="flaticon-calendario amarillo"></i> 27/10/2020</p>
+                <h2 class="titular"><a href="detalle-noticia.htm">Aquí aparece el título de una noticia relacionada con la página web</a></h2>
+              </article>
+            </div>
+
+
+
+            <div class="col12">
+                <div class="separa"></div>
+                <p class="center"><strong>LISTADO DE IMÁGENES SUBE</strong></p>
+                <div class="separa"></div>
+            </div>
+
+            <div class="col03">
+              <article class="listado-caja-vertical redondo">
+                <a href="detalle-app.htm">
+                  <div class="zonaimagen">
+                    <img src="images/app02.png" class="img-responsive" alt="Nombre">
+                  </div>
+                  <div class="zonatexto">
+                    <h2>Whathsapp</h2>
+                  </div>
+                </a>
+              </article>
+            </div>
+
+            <div class="col03">
+              <article class="listado-caja-vertical">
+                <a href="detalle-app.htm">
+                  <div class="zonaimagen">
+                    <img src="images/app02.png" class="img-responsive" alt="Nombre">
+                  </div>
+                  <div class="zonatexto">
+                    <h2>Whathsapp</h2>
+                  </div>
+                </a>
+              </article>
+            </div> 
+
+            <div class="col03">
+              <article class="listado-caja-vertical redondo borde-xl-size">
+                <a href="detalle-app.htm">
+                  <div class="zonaimagen">
+                    <img src="images/app02.png" class="img-responsive" alt="Nombre">
+                  </div>
+                  <div class="zonatexto">
+                    <h2>Whathsapp</h2>
+                  </div>
+                </a>
+              </article>
+            </div>  
+
+            <div class="col03">
+              <article class="listado-caja-vertical redondo borde-s-size">
+                <a href="detalle-app.htm">
+                  <div class="zonaimagen">
+                    <img src="images/app02.png" class="img-responsive" alt="Nombre">
+                  </div>
+                  <div class="zonatexto">
+                    <h2>Whathsapp</h2>
+                  </div>
+                </a>
+              </article>
+            </div>                                    
+
+            <div class="col12">
+                <div class="separa"></div>
+                <p class="center"><strong>LISTADO DE PRECIOS</strong></p>
+                <div class="separa"></div>
+            </div>
+
+
+            <div class="col12">
+
+              <style type="text/css">
+                .pricing ul {
+                    list-style: none;
+                    padding: 0
+                }
+                .pricing .unit {
+                    position: relative;
+                    display: inline-block;
+                    text-align: center;
+                    min-width: 250px;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    border-radius: 4px;
+                    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+                    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, .2)
+                }
+                .pricing .unit.active {
+                    top: 5px;
+                    margin-left: -36px;
+                    margin-right: -36px;
+                    z-index: 1;
+                    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+                    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+                    box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+                }
+                .pricing .unit.active .price-title h3 {
+                    font-size: 40px
+                }
+                @media screen and (max-width: 767px) {
+                    .pricing .unit {
+                        display: block;
+                        margin-bottom: 20px
+                    }
+                    .pricing .unit.active {
+                        top: 0;
+                        margin-left: 0;
+                        margin-right: 0
+                    }
+                    .pricing .unit.active .price-title h3 {
+                        font-size: 30px
+                    }
+                }
+                .pricing .price-title {
+                    padding: 20px 20px 10px;
+                    -webkit-border-top-left-radius: 4px;
+                    -moz-border-radius-topleft: 4px;
+                    border-top-left-radius: 4px;
+                    -webkit-border-top-right-radius: 4px;
+                    -moz-border-radius-topright: 4px;
+                    border-top-right-radius: 4px;
+                    color: #FFF
+                }
+                .pricing .price-title h3,
+                .pricing .price-title h3>p {
+                    margin: 0
+                }
+                .pricing .price-body {
+                    padding: 20px 20px 10px
+                }
+                .pricing .price-body ul {
+                    padding-top: 10px
+                }
+                .pricing .price-body li {
+                    margin-bottom: 10px
+                }
+                .pricing .price-body h4 {
+                    margin: 0
+                }
+                .pricing .price-foot {
+                    padding: 20px;
+                    -webkit-border-bottom-left-radius: 4px;
+                    -moz-border-radius-bottomleft: 4px;
+                    border-bottom-left-radius: 4px;
+                    -webkit-border-bottom-right-radius: 4px;
+                    -moz-border-radius-bottomright: 4px;
+                    border-bottom-right-radius: 4px;
+                    background-color: #E6E9ED
+                }
+                .pricing .price-primary .price-title {
+                    background-color: #4FC1E9
+                }
+                .pricing .price-primary .price-body {
+                    background-color: #d7f1fa
+                }
+                .pricing .price-primary .price-body ul {
+                    border-top: 1px solid #aae1f4
+                }
+                .pricing .price-success .price-title {
+                    background-color: #A0D468
+                }
+                .pricing .price-success .price-body {
+                    background-color: #ebf6df
+                }
+                .pricing .price-success .price-body ul {
+                    border-top: 1px solid #d2ebb7
+                }
+                .pricing .price-warning .price-title {
+                    background-color: #F5D76E
+                }
+                .pricing .price-warning .price-body {
+                    background-color: #fffefd
+                }
+                .pricing .price-warning .price-body ul {
+                    border-top: 1px solid #fcf1cd
+                }
+
+              </style>
+
+              <div class="pricing">
+                <ul>
+                  <li class="unit price-primary">
+                    <div class="price-title">
+                      <h3>$599</h3>
+                      <p>per month</p>
+                    </div>
+                    <div class="price-body">
+                      <h4>Basic</h4>
+                      <p>Lots of clients &amp; users</p>
+                        <ul>
+                           <li>250 SKU's</li>
+                           <li>1 GB Storage</li>
+                           <li>3,5% transaction fee</li>
+                        </ul>
+                    </div>
+                    <div class="price-foot">
+                      <button type="button" class="boton colordest">Try a Week</button>
+                    </div>
+                  </li>
+                  <li class="unit price-success active">
+                    <div class="price-title">
+                      <h3>$299</h3>
+                      <p>per month</p>
+                    </div>
+                    <div class="price-body">
+                      <h4>Premium</h4>
+                      <p>Lots of clients &amp; users</p>
+                      <ul>
+                        <li>2500 SKU's</li>
+                        <li>5 GB Storage</li>
+                        <li>1,5% transaction fee</li>
+                       </ul>
+                    </div>
+                    <div class="price-foot">
+                      <button type="button" class="boton verde">Buy Now</button>
+                    </div>
+                  </li>
+                  <li class="unit price-warning">
+                    <div class="price-title">
+                      <h3>$499</h3>
+                      <p>per month</p>
+                    </div>
+                    <div class="price-body">
+                      <h4>Unlimited</h4>
+                      <p>Lots of clients &amp; users</p>
+                      <ul>
+                        <li>Unlimited SKU's</li>
+                        <li>20 GB Storage</li>
+                        <li>1% transaction fee</li>
+                      </ul>
+                    </div>
+                    <div class="price-foot">
+                      <button type="button" class="boton amarillo">Subscribe</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>  
+
+            </div>
+
+
+
+            <div class="col12">
+                <div class="separa"></div>
+                <p class="center"><strong>POPUP MODALES</strong></p>
+                <div class="separa"></div>
+            </div>  
+
+            <div class="col12">
+                <a class="boton colordest" href="javascript:muestra_id('modal0');">Modal Min</a>
+                <a class="boton colordest" href="javascript:muestra_id('modal1');">Modal Med</a>
+                <a class="boton colordest" href="javascript:muestra_id('modal2');">Modal Big</a>
+                <a class="boton colordest" href="javascript:muestra_id('modal3');">Modal Full</a>
+                <a class="boton colordest" href="javascript:muestra_id('modal4');">Modal con Pie</a>
+            </div>  
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+
+
+            <div class="col12">
+                <a href="javascript:scroll_to('ir-aqui')" class="underline">Saltar a un punto determinado de la web al hacer click</a>
+            </div>  
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+
+            <div class="col12">
+
+                <!-- Slider -->
+                <div id="owl-one" class="owl-carousel owl-theme owl-loaded"> <!-- Añadí id="owl-one" para poder tener más de un slider. quitar si no es necesario y cambiar en custom.js -->
+                    <div class="item">
+                        <div style="background-color: #c8c0de; text-align: center; height: 100px">1</div>
+                    </div>
+                    <div class="item">
+                        <div style="background-color: #c8c0de; text-align: center; height: 100px">2</div>
+                    </div>
+                    <div class="item">
+                        <div style="background-color: #c8c0de; text-align: center; height: 100px">3</div>
+                    </div>  
+                    <div class="item">
+                        <div style="background-color: #c8c0de; text-align: center; height: 100px">4</div>
+                    </div>  
+                    <div class="item">
+                        <div style="background-color: #c8c0de; text-align: center; height: 100px">5</div>
+                    </div>  
+                    <div class="item">
+                        <div style="background-color: #c8c0de; text-align: center; height: 100px">6</div>
+                    </div>  
+                    <div class="item">
+                        <div style="background-color: #c8c0de; text-align: center; height: 100px">7</div>
+                    </div>  
+                    <div class="item">
+                        <div style="background-color: #c8c0de; text-align: center; height: 100px">8</div>
+                    </div>  
+                    <div class="item">
+                        <div style="background-color: #c8c0de; text-align: center; height: 100px">9</div>
+                    </div>                          
+                </div>
+                <!-- fin Slider -->
+
+            </div>
+
+            <div class="col12">
+                <div class="separa3"></div>
+            </div>  
+
+
+            <div class="col02">
+                <div class="bota-izq sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.bota-izq</div>
+            </div>  
+
+            <div class="col02">
+                <div class="pulsa sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.pulsa</div>
+            </div>  
+
+            <div class="col02">
+                <div class="bota-abajo sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.bota-abajo</div>
+            </div>  
+
+            <div class="col02">
+                <div class="fade-abajo sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.fade-abajo</div>
+            </div>
+
+            <div class="col02">
+                <div class="bota-der sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.bota-der</div>
+            </div>
+
+            <div class="col02">
+                <div class="aparece sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.fadeIn</div>
+            </div>
+
+            <div class="col02">
+                <div class="flasea sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.flasea</div>
+            </div>
+
+            <div class="col02">
+                <div class="borra sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.borra</div>
+            </div>
+
+            <div class="col02">
+                <div class="tiembla sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.tiembla</div>
+            </div>
+
+            <div class="col02">
+                <div class="sacude sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.sacude</div>
+            </div>
+
+            <div class="col02">
+                <div class="baila sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.baila</div>
+            </div>
+
+            <div class="col02">
+                <div class="tralara sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.tralara</div>
+            </div>
+
+            <div class="col02">
+                <div class="bambolea sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.bambolea</div>
+            </div>
+
+            <div class="col02">
+                <div class="gelatina sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.gelatina</div>
+            </div>
+
+            <div class="col02">
+                <div class="rebotaInUp sepbot" style="width: 150px; height: 100px; background-color: grey; color:white">.rebotaInUp</div>
+            </div>
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+
+            <div class="col06">
+                <p class="center"><strong>VIDEO RESPONSIVE</strong></p>
+                <div class="separa"></div>
+
+                <!-- Video responsive -->
+                <div class="video-container">
+                    <iframe src="images/SampleVideo_1280x720_1mb.mp4" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+            </div>  
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>      
+
+            <div class="col06">
+                <p class="center"><strong>IMAGENES SVG</strong></p>
+                <div class="separa"></div>
+                <div style="display: inline-block; width: 200px; height: 200px; text-align: center; margin-right: 5px">
+                    <img class="img-responsive" src="images/nofoto.svg">
+                    nofoto.svg
+                </div>
+                <div style="display: inline-block; width: 200px; height: 200px; text-align: center; margin-right: 5px">
+                    <img class="img-responsive" src="images/nouser.svg">
+                    nouser.svg
+                </div>        
+            </div>
+
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+
+
+            <div class="col06">
+            	<p class="center"><strong>VIDEO VERTICAL</strong></p>
+                <div class="separa"></div>
+                <!-- Video Vertical -->
+        		<div class="video-container" style="margin: 0 10px; padding-bottom: 178%; padding-top: 0">
+        			<!-- Utilizar tag video, no iframe -->
+        			<video src="video/videoV.mp4" controls frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></video>
+        		</div>
+            </div>  
+
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>  
+
+
+            <div class="col12">
+                <p class="center mayusculas"><strong>Mostrar / Ocultar elementos según resolución de pantalla</strong></p>
+                <br><br>
+                <div style="display: flex; flex-direction: : row; justify-content: space-between;">
+                    <div><strong>Teléfono:</strong> [0px a 767px]</div>
+                    <div><strong>Tableta:</strong> [768px a 991px]</div>
+                    <div><strong>Escritorio:</strong> [ > 991px]</div>
+                </div>
+            </div>  
+            <div class="col12">
+                <div class="linea-min"></div>
+            </div>              
+            <div class="col12">
+                <div style="display: flex; flex-direction: : row; justify-content: space-between;">
+                    <div>
+                        class="telefono"
+                        <div class="telefono" style="background-color: lightblue; width: 100px; height: 50px; border-radius: 5px; text-align: center"></div>
+                    </div>
+                    <div>
+                        class="tableta telefono"
+                        <div class="tableta telefono" style="background-color: lightblue; width: 100px; height: 50px; border-radius: 8px; text-align: center""></div>
+                    </div>
+                    <div>
+                        class=""
+                        <div style="background-color: deepskyblue; width: 100px; height: 50px; border-radius: 5px; text-align: center"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col12">
+                <div class="linea"></div>
+            </div>          
+            <div class="col12">
+                <div style="display: flex; flex-direction: : row; justify-content: space-between;">
+                    <div>
+                        class="telefono"
+                        <div class="telefono" style="background-color: lightblue; width: 100px; height: 50px; border-radius: 5px; text-align: center"></div>
+                    </div>
+                    <div>
+                        class="tableta"
+                        <div class="tableta" style="background-color: lightblue; width: 100px; height: 50px; border-radius: 8px; text-align: center"></div>
+                    </div>
+                    <div>
+                        class="escritorio"
+                        <div class="escritorio" style="background-color: deepskyblue; width: 100px; height: 50px; border-radius: 5px; text-align: center"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col12">
+                <div class="linea"></div>
+            </div>                  
+
+            <div class="separa3"></div>
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div>          
+
+            <div class="col12">
+                <h1 class="titulo fuente-destacada">
+                    [.titulo] Lorem Ipsum 
+                </h1>
+            </div>      
+            <div class="col12">
+                <h2 class="subtitulo-big fuente-destacada">
+                    [.subtitulo-big] "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                </h2>
+            </div>          
+            <div class="col12">
+                <h3 class="subtitulo fuente-destacada">
+                    [.subtitulo] "No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, simplemente porque es el dolor."
+                </h3>
+            </div>
+            <div class="col12">
+                <h4 class="tit-parrafo">
+                    [.tit-parrafo] ¿Qué es Lorem Ipsum?
+                </h4>
+            </div>          
+            <div class="col12">
+                <p class="parrafo">
+                    [.parrafo] Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+                </p>
+            </div>
+            <div class="col12">
+                <p class="pieparrafo">
+                    [.pieparrafo] Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. 
+                </p>
+            </div>
+
+            <div class="col12">
+                <p class="blockquote">[.blockquote] Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>
+            </div>
+
+            <div class="col12">
+                <div class="separa"></div>
+                <p class="capitular">
+                    Lorem Ipsum [.capitular]  es simplemente el texto de relleno de las imprentas y archivos de texto.  Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta).
+                </p>
+            </div>  
+
+            <div class="col12">
+                <div class="separa"></div>
+                <strong>Etiqueta en negrita [strong].</strong> <br>
+                <cite>Etiqueta para hacer una cita poniendo el texto en cursiva [cite].</cite>
+                <pre>Etiqueta para texto preformateado monoespacio [pre].</pre>
+                <del>Etiqueta para tachar el texto [del].</del> <br>
+                <ins>Etiqueta con el texto insertado subrayado [ins].</ins>
+                <blockquote>Etiqueta para hacer un párrafo resaltado genérico [blockquote].</blockquote>
+                <abbr title="Significado de la Abrebiatura">Abrebiaciones [abbr].</abbr> <br>
+                <acronym title="Significado del acrónimo">Acrónimos [acronym].</acronym> <br>
+                <address>Etiqueta para dirección postal [address].</address>
+                <dfn>Etiqueta para una definición [dfn]</dfn> <br>
+                <code>Etiqueta para visulizar código en monoespacio [code].</code> <br>
+                <sub>Etiqueta para escribir texto en subindice [sub].</sub>
+                <sup>Etiqueta para escribir texto en superindice [sup].</sup>
+                <small>Small size text historically used to simply reduced text size.</small>
+                <bdo dir="ltr">Etiqueta escribe  Left To Right [bdo dir="ltr"]</bdo> <br>
+                <bdo dir="rtl">Etiqueta escribe texto indicando la direccion [bdo dir="rtl"]</bdo>
+            </div>
+            <div class="col12">
+                <p class="croptexto" style="width: 50%; padding: 10px; margin: 10px 0; background-color: #dbe3ff"><strong>.croptexto</strong><br>file:///Z:/imagenes%20ichuta/%23%23%23%20HTML%20RESPONSIVE%20FRAMEWORK/componentes.html</p>
+            </div>
+            <div class="col12">
+                <p class="elipsis" style="width: 50%; padding: 10px; margin: 10px 0; background-color: #dbe3ff"><strong>.elipsis</strong><br>file:///Z:/imagenes%20ichuta/%23%23%23%20HTML%20RESPONSIVE%20FRAMEWORK/componentes.html</p>
+            </div>
+
+            <div class="col12">
+                <div class="separa3"></div>
+                <div class="separa"></div>
+            </div> 
+
+            <div class="col12">
+                <div class="separa3"></div>
+                <p class="center"><strong>TRUNCA TEXTO</strong><br>
+                  <span style="font-size: 0.8em; color:grey">(...en una determinada linea al final metiendo tres puntos)</span></p>
+                <div class="separa"></div>
+            </div> 
+
+            <div class="col03">
+              <style type="text/css">
+                .recorta-lineas {
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                }
+              </style>
+              <p class="recorta-lineas" style="width: 100%; height: 80px">
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  
+              </p>
+            </div>
+
+            <div class="col12">
+            	<div class="separa"></div>
+            <div class="separa"></div>
+            <div class="separa"></div>
+            <div class="separa"></div>
+
+            	<div style="width: 100%; max-width: 500px; background-color: #f1f2f3; border: 2px solid #d3d3d3; border-radius: 5px; color: #4c4a4b; display: flex; justify-content: center; align-items: center ">
+            		<div style="display: flex; justify-content: space-between; width: 100%">
+
+	            		<div style="position: relative; display: flex; margin: 15px; align-items: center; justify-content: center;">
+
+	            			<div style="background-color: white; border: 2px solid #d3d3d3; border-radius: 2px; width: 25px; height: 25px"></div>
+	            			<img style="width: 35px" src="reload.svg">
+	            			<img style="width: 35px" src="check.svg">
+	            			<div style="font-size: 16px; font-weight: 600; margin-right: 1em; margin-left: 15px">No soy un robot</div>
+
+	            		</div>
+	            		<div style="display: flex; flex-direction: column; align-items: center; height: 100%; align-self: flex-end; margin: 0.5em 1em;"> 
+	            			<img style="width: 35px" src="captcha.svg">
+	            			<p style="font-weight: 600; font-size: 12px;color: #9d9ba7;">reCAPTCHA</p>
+	            		</div>
+					</div>
+            	</div>
+            </div>
+
+            <div class="col12">
+                <div class="separa"></div>
+            </div> 
+
+            <div class="col12">
+
+
+            	<style type="text/css">
+            		.container-bannerslider { width: 728px; height: 90px; border: 1px solid black; background-color: #ffffff }
+            		.item-content {height: 89px}
+            		.ladoizq{background-color: red; position: absolute; left: 0; top: 0; height: 88px; width:150px}
+            	</style>
+                <!-- Slider -->
+                <div class="container-bannerslider" style="position: relative;">
+                	<div class="ladoizq">
+                		<div style="font-size: 30px; color: #fff; margin-top: 30px; margin-left: 20px">TITULO</div>
+                		
+                	</div>
+
+                	<div id="owl-two" class="owl-carousel owl-theme owl-loaded" style="padding-left: 150px">
+	                    <div class="item">
+	                        <div class="item-content">1</div>
+	                    </div>
+	                    <div class="item">
+	                        <div class="item-content">2</div>
+	                    </div>
+	                    <div class="item">
+	                        <div class="item-content">3</div>
+	                    </div>  
+	                    <div class="item">
+	                        <div class="item-content">4</div>
+	                    </div>  
+	                </div>
+                </div>
+                
+                <!-- fin Slider -->
+
+            </div>
+
+            <div class="col12">
+                <div class="separa3"></div>
+            </div> 
+
+            <div class="separa"></div>
+
+
+            <div class="separa"></div>
+            <div class="separa"></div>
+        </div>
+    </div>
+
+
+    <!-- 
+    #################
+    FIN CONTENIDO
+    ################# 
+    -->
+
+
+    <!-- <div class="ajustapie"></div> -->
+    
+    <!--Footer-->
+    <footer class="caja-pie ajustalalto-pie"><!-- ocupa todo alto 3/3 -->
+        <div class="contenedor">
+            <div class="fila">
+                <div class="col12">
+                    <div class="separa s-size"></div>
+                    <img class="centrado" src="images/logotipo.png"  alt="" >
+                    <div class="separa xs-size"></div>
+                    <div class="zona zona-abajo center">
+                        <p><span class="desresalta">Watmedia advertising S.L. </span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separa xs-size"></div>
+        <div class="centrado">
+            <p class="zona-legal grisoscuro">
+                <a href="aviso-legal.htm" rel="nofollow">DATOS LEGALES (LSSICE)</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="politica-de-privacidade.htm" rel="nofollow">POLÍTICA DE PRIVACIDAD</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="cookies.htm" rel="nofollow">POLÍTICA DE COOKIES</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="cookies.htm" rel="nofollow">TERMINOS Y CONDICIONES</a>
+            </p>
+        </div>
+    </footer>   
+    <!--Fin Footer-->
+                    
+    
+</div>
+<!--FIN WEB-->
+
+
+<!--Tamaño pantalla-->
+<div id="dimensions">
+    Ancho de pantalla: <span class="width"></span>
+</div>
+
+
+
+<!--Scroll top-->
+<a href="#" class="scrolltop">Ir arriba</a>
+
+<!--Jquery-->
+<script src="js/jquery.min.js"></script>
+
+<!--Generales-->
+<script src="js/general.js"></script>
+
+<!--Appear-->
+<script type="text/javascript"  src="js/jquery.appear.js"></script>
+
+<!--Owl carousel-->
+<script type="text/javascript"  src="js/owl.carousel.js"></script>
+
+<!--noticias pasando-->
+<!-- <script src="js/jquery.newsTicker.min.js"></script> -->
+
+<!--Scripts de la web al final-->
+<script src="js/custom.js"></script>
+
+
+
+
+</body>
+
+</html>

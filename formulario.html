@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="gl">
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<!--Carga correcta para navegadores antiguos-->
+	<!--[if lt IE 9]>
+	   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta content="es" http-equiv="Content-Language">
+	   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
+	
+	<title>Secure Billing Pro</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="">
+
+    <meta name="format-detection" content="telephone=no"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+   	
+   	<!-- Chrome, Firefox OS y Opera -->
+	<meta name="theme-color" content="#2a2a2a">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#2a2a2a">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#2a2a2a">
+
+	
+	<!-- Estilos -->
+   	<link rel="stylesheet" href="css/body.css" />
+	<link rel="stylesheet" href="css/estilos.css" />
+	<link rel="stylesheet" href="css/flexible.css" />
+	<link rel="stylesheet" href="css/textos.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="css/owl.theme.css" />
+	<link rel="stylesheet" href="css/formularios.css" />
+	<link rel="stylesheet" href="css/flaticon.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+	<link rel="stylesheet" href="css/general.css" />	
+
+	<!-- Fuentes -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" />
+
+    <!-- Fav y touch icons-->
+	<link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="ico/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="ico/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="ico/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="ico/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="ico/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="ico/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="ico/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+	<link rel="manifest" href="ico/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon" />
+	
+	<style type="text/css">
+        pre { border:1px solid #A2A2A2; background-color:#F1F1F1; padding:8px;
+            margin:5px; color:#0150c7;  overflow:auto; font-size: 0.8em; line-height: 1em }
+    </style>
+	
+</head>
+
+<body class="wide"><!--boxed fondoweb-->
+
+
+
+
+<!--WEB-->
+<div class="page-wrapper ajustafooter">
+	
+	<header class="fontop
+	               main_menu home_menu"><!-- Clases para el menú animado -->
+		<!--Zona logo y menu -->
+		<div class="contenedor">
+			<div class="fila">
+				<div class="col02 col02-xs  col02-xxs">
+					<div class="logotipo izq">
+						<a href="" title="Wantatop"><img src="images/logotipo.png"  alt="Wantatop" ></a>
+					</div>
+				</div>
+				<div class="col10 col10-xs col10-xxs">
+					<!-- Zona Menu Desktop -->
+					<div class="zona-menu">
+						<ul class="menu-desktop color">
+							<li class="menu-opcion">
+								<a class="fuente-destacada" href="javascript:scroll_to('nosotros')">NOSOTROS</a>
+							</li>
+							<li class="menu-opcion">
+								<a class="fuente-destacada" href="javascript:scroll_to('perfomance')">PERFOMANCE MARQUETING</a>
+							</li>
+							<li class="menu-opcion">
+								<a class="fuente-destacada" href="javascript:scroll_to('servicios')">SERVICIOS 360</a>
+							</li>
+							<li class="menu-opcion resaltado">
+								<a class="fuente-destacada" href="javascript:scroll_to('conozcamonos')">CONOZCÁMONOS</a>
+							</li>
+							<li class="menu-opcion login c-gris">
+								<a class="fuente-destacada" href="javascript:muestra_id('modal0');">ACCESO CLIENTES <span class="flaticon-candado"></span>
+								</a>
+							</li>
+							<li class="relative enlinea">
+								<a class="link-dropdownmenu" href="javascript:muestra_oculta_id('idiomas')"><img class="dropdown-menu-imagen" src="images/flags/es.png"><i class="triangulo"></i></a>
+								<ul class="dropdown-menu" id="idiomas">
+									<li class="dropdown-menu-idioma">
+										<a class="dropdown-menu-enlace" href=""><img src="images/flags/en.png" alt="Idioma"> English</a>
+									</li>
+									<li class="dropdown-menu-idioma">
+										<a class="dropdown-menu-enlace activo" href=""><img src="images/flags/es.png" alt="Idioma"> Español</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- Fin Zona Menu Desktop -->
+
+					<!-- Zona Menu Icos(en movil) -->
+					<div class="icos-menu der">
+						<div class="relative enlinea">
+								<a class="link-dropdownmenu" href="javascript:muestra_oculta_id('idiomas2')"><img src="images/flags/es.png"><i class="triangulo"></i></a>
+								<ul class="dropdown-menu" id="idiomas2">
+									<li class="dropdown-menu-idioma">
+										<a class="dropdown-menu-enlace" href=""><img src="images/flags/en.png" alt="Idioma"> English</a>
+									</li>
+									<li class="dropdown-menu-idioma">
+										<a class="dropdown-menu-enlace activo" href=""><img src="images/flags/es.png" alt="Idioma"> Español</a>
+									</li>
+								</ul>
+							</div>
+						<a class="icos-menu__link sepizq" href="javascript:muestra_oculta_id('menumovil')"><span class="flaticon-menu-button-of-three-horizontal-lines"></span></a>
+					</div>
+					<!-- Fin Zona Menu Icos(en movil) -->
+
+					<!-- Zona Menu Movil -->
+					<div id="menumovil">
+						<ul class="menu-movil">
+							<li class="menu-opcionm"><a class="fuente-destacada"  href="javascript:scroll_to('nosotros')">NOSOTROS</a></li>
+							<li class="menu-opcionm"><a class="fuente-destacada"  href="javascript:scroll_to('perfomance')">PERFOMANCE MARQUETING</a></li>
+							<li class="menu-opcionm"><a class="fuente-destacada" href="javascript:scroll_to('servicios')">SERVICIOS 360</a></li>
+							<li class="menu-opcionm"><a class="fuente-destacada" href="javascript:scroll_to('conozcamonos')">CONOZCÁMONOS</a></li>
+							<li class="menu-opcionm resaltado"><a class="fuente-destacada" href="javascript:muestra_id('modal0');"><span class="flaticon-candado sepder"></span>ACCESO CLIENTES</a></li>
+						</ul>
+					</div>
+					<!-- Fin Zona Menu Movil -->
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<!-- Zona Separa de Menu -->
+	<div class="separa-menu"></div>
+
+	<!-- 
+	#################
+	INICIO CONTENIDO
+	################# 
+	-->
+
+
+	
+
+	<div class="contenedor">
+		<div class="fila">
+
+			<div class="col12">
+				<div class="separa3"></div>
+				<p>Requerido <strong>formularios.js</strong>, <strong>formularios.css</strong> y <strong>general.js</strong></p>
+				<div class="separa"></div>
+
+				<form id="formulario_superior" name="formulario_superior" class="form_top" action="../base/callback.php" method="post" target="self">
+		
+					<label class="labelcampos">Nombre:</label>
+					<input class="formulario obligatorio full" name="nombre" type="text" title="Nombre y apellidos" placeholder="Nombre y apellidos" required="" />
+					<div class="separa-min"></div>
+					<div class="limpiar"></div>
+							
+
+					<label class="labelcampos">Email:</label>
+					<input class="formulario obligatorio full" name="email" type="text"  title="Email" placeholder="Introduce Email" required="" />
+					<div class="separa-min"></div>
+					<div class="limpiar"></div>
+
+
+					<label class="labelcampos">Email:</label>
+
+					<input class="formulario obligatorio full" name="email2" type="text"  title="Email2" placeholder="Introduce Email" required=""/>
+					<div class="separa-min"></div>
+					<div class="limpiar"></div>
+
+
+					<label class="labelcampos">Email:</label>
+					
+					<input class="formulario ko full" name="email3" name="email" type="text"  title="Email" placeholder="Introduce Email" required="" />
+					<div class="separa-min"></div>
+					<div class="limpiar"></div>
+
+					<label class="labelcampos">Contraseña:</label>
+
+					<input class="formulario full obligatorio" type="password" value="Contraseña" name="pass" title="Password" placeholder="Introduce password" required="" />
+					<div class="separa-min"></div>
+					<div class="limpiar"></div>
+					
+					<label class="labelcampos">Categoría:</label>
+					<div class="select-estilo"> <!-- Caja que crea la flecha abajo -->
+						<select size="1" class="formulario redondo-min notfull " name="cuenta" id="cuenta" style="line-height:26px/*hack safari*/">
+							<option selected="selected">Chico</option>
+							<option>Chica</option>
+							<option>Pareja</option>
+						</select>
+					</div>
+					<div class="separa-min"></div>
+					<div class="limpiar"></div>
+
+					<label class="labelcampos">Mensaje:</label>
+					<textarea class="formulario redondo-min notfull" name="mensaje_texto" id="mensaje_texto"  rows="6" >Escribir aquí...</textarea>
+					<div class="separa-min"></div>
+					<div class="limpiar"></div>	
+
+					<div class="select-estilo"> <!-- Caja que crea la flecha abajo -->
+						<select class="formulario full obligatorio select-css" name="">
+							<option>País...</option>
+							<option>Primera opción</option>
+							<option>Segunda opción</option>
+							<option>Tercera opción</option>
+							<option>Cuarta opción</option>
+						</select>
+					</div>
+
+					<div class="separa1"></div>
+					
+					<!-- Check box decorado -->
+					<label class="container-check">One
+						<input type="checkbox" checked="checked">
+						<span class="checkmark-check"></span>
+					</label>
+					<label class="container-check">Two
+						<input type="checkbox">
+						<span class="checkmark-check"></span>
+					</label>
+
+					<div class="separa"></div>
+
+					<label class="container-radio">One
+						<input type="radio" checked="checked" name="radio">
+						<span class="checkmark-radio"></span>
+					</label>
+					<label class="container-radio">Two
+						<input type="radio" name="radio">
+						<span class="checkmark-radio"></span>
+					</label>
+
+					<div class="separa"></div>
+
+					<div class="input-control radio enlinea sepder">
+					    <label>
+					        <input type="radio" name="r1" />
+					        <span class="check"></span>
+					        Input check
+					    </label>
+					</div>
+					
+					<div class="input-control radio enlinea">
+					    <label>
+					        <input type="radio" name="r1" />
+					        <span class="check"></span>
+					       	Input check
+					    </label>
+					</div>
+					
+					<div class="separa1"></div>
+					<div class="limpiar"></div>
+					
+
+					<div class="input-control checkbox enlinea sepder">
+						<label>
+						<input type="checkbox"/>
+						<span class="check"></span>
+							Checkbox
+						</label>
+					</div>
+
+					<div class="input-control checkbox enlinea sepder">
+						<label>
+						<input type="checkbox"/>
+						<span class="check"></span>
+							Checkbox
+						</label>
+					</div>
+
+					<div class="input-control checkbox alert enlinea">
+						<label>
+						<input type="checkbox"/>
+						<span class="check"></span>
+							Checkbox Marcado
+						</label>
+					</div>
+					
+					<div class="separa1"></div>
+					<div class="limpiar"></div>
+					
+
+					<div class="input-control switch sepder enlinea">
+						<label>
+							Switch 1:
+							<input type="checkbox" checked/>
+							<span class="check"></span>
+						</label>
+					</div>
+
+					<div class="input-control switch enlinea">
+						<label>
+							Switch 2:
+							<input type="checkbox"/>
+							<span class="check"></span>
+						</label>
+					</div>
+
+					<div class="separa1"></div>
+					<div class="limpiar"></div>
+
+                  	<!--switch-->
+                  	<h2 class="title s-size s-marginbt">Input switch</h2>
+					<input type="checkbox" id="switch1" switch="none" checked="">
+					<label for="switch1" data-on-label="On" data-off-label="Off"></label>
+					
+					<input type="checkbox" id="switch2" switch="default" checked="">
+					<label for="switch2" data-on-label="" data-off-label=""></label>
+                
+					<input type="checkbox" id="switch3" switch="verderojo" checked="">
+					<label for="switch3" data-on-label="Sí" data-off-label="No"></label>
+						
+					<input type="checkbox" id="switch4" switch="verde" checked="">
+					<label for="switch4" data-on-label="Sí" data-off-label="No"></label>
+						
+					<input type="checkbox" id="switch5" switch="amarillo" checked="">
+					<label for="switch5" data-on-label="Sí" data-off-label="No"></label>
+                                
+					<input type="checkbox" id="switch8" switch="rojo" checked="">
+					<label for="switch8" data-on-label="Sí" data-off-label="No"></label>
+                
+					<input type="checkbox" id="switch9" switch="gris" checked="">
+					<label for="switch9" data-on-label="Sí" data-off-label="No"></label>
+
+					<div class="separa xs-size"></div>
+
+					<div class="d-flex">
+                    	<div class="square-switch">
+                        	<input type="checkbox" id="square-switch1" switch="none" checked="">
+                            <label for="square-switch1" data-on-label="On" data-off-label="Off"></label>
+                        </div>
+                        <div class="square-switch">
+                        	<input type="checkbox" id="square-switch3" switch="verderojo" checked="">
+                            <label for="square-switch3" data-on-label="Sí" data-off-label="No"></label>
+                        </div>
+					</div>
+					<div class="separa xs-size"></div>
+					
+					<div class="input-control-switch d-inline-flex">
+	                  	<p>Switch 1:</p>
+						<div class="square-switch">
+	                    	<input type="checkbox" id="square-switch4" switch="amarillo" checked="">
+	                    	<label for="square-switch4" data-on-label="Sí" data-off-label="No"></label>
+	                    </div>
+					</div>
+					<div class="input-control-switch d-inline-flex">
+	                  	<p>Switch 2:</p>
+						<input type="checkbox" id="switch10" switch="gris" checked="">
+						<label for="switch10" data-on-label="Sí" data-off-label="No"></label>
+					</div>					
+
+					
+					<div class="separa1"></div>
+					<div class="limpiar"></div>
+					
+
+								<!-- RANGO EDAD ######################################################################################################################## -->
+								<!-- https://stackoverflow.com/questions/4753946/html5-slider-with-two-inputs-possible -->
+								<style type="text/css">
+									
+									input[type='range'] {
+									  width: 210px;
+									  height: 30px;
+									  overflow: hidden;
+									  cursor: pointer;
+									    outline: none;
+									    padding-right: 10px
+									}
+									input[type='range'],
+									input[type='range']::-webkit-slider-runnable-track,
+									input[type='range']::-webkit-slider-thumb {
+									  -webkit-appearance: none;
+									    background: none;
+									}
+									input[type='range']::-webkit-slider-runnable-track {
+									  width: 200px;
+									  height: 3px;
+									  background: #ff8b00; /* ======================================== COLOR DE LA RAYA*/
+									}
+
+									input[type='range']:nth-child(2)::-webkit-slider-runnable-track{
+									  background: none;
+									}
+
+									input[type='range']::-webkit-slider-thumb {
+									  position: relative;
+									  height: 25px;
+									  width: 25px;
+									  margin-top: -12px;
+									  background: #fff;
+									  border: 3px solid #ff8b00; /* =================================== COLOR CIRCULOS*/
+									  border-radius: 25px;
+									  z-index: 1;
+									  -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
+									  -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
+									  box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
+									}
+
+
+									input[type='range']:nth-child(1)::-webkit-slider-thumb{
+									  z-index: 2;
+									}
+
+									.rangeslider{
+									    position: relative;
+									    height: 60px;
+									    width: 100%; /*por ichuta*/
+									    display: inline-block;
+									    margin-top: -5px;
+									    /*margin-left: 20px;*/ /*por ichuta*/
+									    margin-right: 20px;
+									    padding-right: 20px 
+									}
+									.rangeslider input{
+									    position: absolute; 
+									    width: 100% /*por ichuta*/
+									}
+									.rangeslider{
+									   /* position: absolute;*/ /*por ichuta*/
+									}
+
+									.rangeslider span{
+									    position: absolute;
+									    margin-top: 30px;
+									    left: 0;
+									}
+
+									.rangeslider .right{
+									   position: relative;
+									   float: right;
+									   margin-right: -5px;
+									}
+								</style>
+
+								
+
+								<div class="rangeslider">
+	                                <input class="min" name="range_1" type="range" min="1" max="100" value="18" />
+	                                <input class="max" name="range_1" type="range" min="1" max="100" value="90" />
+	                                <span class="range_min light left">18 unidades</span>
+	                                <span class="range_max light right">90 unidades</span>
+	                            </div>
+	                            <div class="limpiar"></div>
+
+	                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	                            <script type="text/javascript">
+									(function() {
+
+								        function addSeparator(nStr) {
+								            nStr += '';
+								            var x = nStr.split('.');
+								            var x1 = x[0];
+								            var x2 = x.length > 1 ? '.' + x[1] : '';
+								            var rgx = /(\d+)(\d{3})/;
+								            while (rgx.test(x1)) {
+								                x1 = x1.replace(rgx, '$1' + '.' + '$2');
+								            }
+								            return x1 + x2;
+								        }
+
+								        function rangeInputChangeEventHandler(e){
+								            var rangeGroup = $(this).attr('name'),
+								                minBtn = $(this).parent().children('.min'),
+								                maxBtn = $(this).parent().children('.max'),
+								                range_min = $(this).parent().children('.range_min'),
+								                range_max = $(this).parent().children('.range_max'),
+								                minVal = parseInt($(minBtn).val()),
+								                maxVal = parseInt($(maxBtn).val()),
+								                origin = $(this).context.className;
+
+								            if(origin === 'min' && minVal > maxVal-5){
+								                $(minBtn).val(maxVal-5);
+								            }
+								            var minVal = parseInt($(minBtn).val());
+								            $(range_min).html(addSeparator(minVal*1000) + ' €');
+
+
+								            if(origin === 'max' && maxVal-5 < minVal){
+								                $(maxBtn).val(5+ minVal);
+								            }
+								            var maxVal = parseInt($(maxBtn).val());
+								            $(range_max).html(addSeparator(maxVal*1000) + ' €');
+								        }
+
+								    	$('input[type="range"]').on( 'input', rangeInputChangeEventHandler);
+									})();
+								</script>
+								<!-- RANGO EDAD ######################################################################################################################## -->
+
+
+
+					<div class="separa"></div>
+					<input name="enviar" class="formulario boton enviar full" id="enviar" onclick="javascript:enviar_formulario('formulario_contacto')" type="button" value="Enviar">
+					<div class="limpiar"></div>
+
+				</form>
+
+				<div class="separa"></div>
+
+				<style type="text/css">
+					.searchform {
+					  position: relative;
+					  /*top: -1rem;*/
+					  transform: translateX(-50%, -50%);
+					  transition: all 1s;
+					  width: 50px;
+					  height: 50px;
+					  background: #ff8b00;
+					  box-sizing: border-box;
+					  border-radius: 25px;
+					  border: 4px solid #ff8b00;
+					  padding: 5px;
+					  margin-right: 1rem;
+					}
+
+					.searchinput {
+					  position: absolute;
+					  top: 0;
+					  left: 0;
+					  width: 100%;
+					  height: 42.5px;
+					  line-height: 30px;
+					  outline: 0;
+					  border: 0;
+					  display: none;
+					  font-size: 1em;
+					  border-radius: 30px;
+					  padding: 0 20px;
+					}
+
+					.searchfa {
+					  box-sizing: border-box;
+					  padding: 8px 10px 10px 10px;
+					  width: 42.5px;
+					  height: 42.5px;
+					  position: absolute;
+					  top: 0;
+					  right: 0;
+					  border-radius: 50%;
+					  color: #fff;
+					  text-align: center;
+					  font-size: 1.5em;
+					  transition: all 1s;
+					}
+
+					.searchform:hover {
+					  width: 200px;
+					  cursor: pointer;
+					}
+
+					.searchform:hover input {
+					  display: block;
+					  background: #ff8b00;
+					  color: white;
+					}
+
+					.searchform:hover i {
+					  background: #fff;
+					  color: #ff8b00;
+					}
+				</style>
+				Search Form
+				<form class="searchform">
+					<input class="searchinput" type="search"><i class="flaticon-magnifier-tool searchfa"></i>
+				</form>
+
+
+				<div class="separa"></div>
+
+					<form id="formulario_superior2" name="formulario_superior2" class="form_top" action="../base/callback.php" method="post" target="self">
+					<!--Formulario-->			
+						<input name="nombre" class="formulario full obligatorio" type="text" placeholder="Nombre y apellidos" title="Nombre y Apellidos" required="">
+						<div class="limpiar"></div>
+								
+						<input name="email" class="formulario full obligatorio" type="text" placeholder="Email" title="Introduzca su email" required="">
+						<div class="limpiar"></div>
+
+						<input name="telefono" class="formulario full obligatorio" type="text" placeholder="Teléfono" title="Introduzca su teléfono" required="">
+						<div class="limpiar"></div>
+
+						<textarea class="formulario redondo-min notfull" name="mensaje_texto" id="mensaje_texto" rows="6" style="background-color: #fff" placeholder="Escribe aquí tu mensaje..."></textarea>
+						<div class="limpiar"></div>
+
+						<div class="input-control checkbox enlinea sepder c-gris" style="line-height: 1em">
+							<label style="font-size: 0.8em">
+								<input type="checkbox" class="formulario obligatorio" name="tratamiento_datos" value="false" style="height: 15px; margin: 0" required="">
+								<span class="check"></span>
+									Acepto de forma expresa el tratamiento de mis datos de acuerdo <a href="https://www.socialcashout.com/datos-legales/escuadrontrading.html" target="_blank"> a los términos</a> y condiciones del concurso y la <a href="https://www.socialcashout.com/datos-legales/privacidad.html" target="_blank"> política de tratamiento de datos</a> establecida por la siguiente promoción. <!-- [<a href="javascript:muestra_id('modal0');">+info RPGD</a>] -->
+							</label>
+						</div>
+
+						<div class="limpiar"></div>
+
+						<div class="separa"></div>
+						<input name="enviar" class="formulario boton enviar full" id="enviar" type="button" value="Enviar mensaje">
+
+						<!-- <input type="hidden" name="action" value="mail"> -->
+						<input type="hidden" name="to" value="clientes@houseu.es">
+						<input type="hidden" name="redireccion" value="gracias.html">
+
+						<div class="limpiar"></div>
+					</form>
+
+			</div>			
+	
+				<div class="separa1"></div>	<div class="separa"></div>
+				<div class="separa1"></div>	<div class="separa"></div>
+		</div>
+	</div>
+
+	
+	<div class="ajustapie"></div>
+	
+	<!--Footer-->
+	<footer class="footer negro" >
+		<div class="contenedor">
+			<div class="fila">
+				<div class="col12">
+					<div class="zona zona-abajo">
+						<img src="images/logo-bn.png" alt="Secure Billing" />
+						<p><span class="desresalta">SecureBilling.PRO es una plataforma de cobros segura perteneciente a: WATMEDIA ADVERTISING SL - Calle Obispo Encina 19, 4 - 3504 - Las Palmas de Gran Canaria</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="separa-min"></div>
+		<div class="centrado">
+			<p class="zona-legal grisoscuro"><a href="aviso-legal.htm" rel="nofollow">DATOS LEGALES (LSSICE)</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="politica-de-privacidade.htm" rel="nofollow">POLÍTICA DE PRIVACIDAD</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="cookies.htm" rel="nofollow">POLÍTICA DE COOKIES</a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="cookies.htm" rel="nofollow">TERMINOS Y CONDICIONES</a></p>
+		</div>
+	</footer>
+
+
+</div>
+<!--FIN WEB-->
+
+
+<!--Tamaño pantalla-->
+<div id="dimensions">
+	Ancho de pantalla: <span class="width"></span>
+</div>
+
+
+
+<!--Scroll top-->
+<a href="#" class="scrolltop">Ir arriba</a>
+
+<!--Jquery-->
+<script src="js/jquery.min.js"></script>
+
+<!--Generales-->
+<script src="js/general.js"></script>
+
+<script src="js/formularios.js"></script>
+
+<!--Appear-->
+<script type="text/javascript"  src="js/jquery.appear.js"></script>
+
+<!--Owl carousel-->
+<script type="text/javascript"  src="js/owl.carousel.js"></script>
+
+
+<!--Scripts de la web al final-->
+<script src="js/custom.js"></script>
+
+
+</body>
+
+</html>
