@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 13.229166 9.5250012"
+   height="36"
+   width="50">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-287.47495)"
+     id="layer1">
+    <g
+       transform="translate(-2.302514,1.7706606)"
+       id="g4508">
+      <path
+         id="path4549"
+         d="m 7.3638715,286.74919 a 5.0445437,3.8893416 0 0 0 -5.0441364,3.88917 5.0445437,3.8893416 0 0 0 5.0441364,3.88916 5.0445437,3.8893416 0 0 0 5.0446535,-3.88916 5.0445437,3.8893416 0 0 0 -5.0446535,-3.88917 z m -3.2824869,2.03243 3.0070517,0.008 -0.00827,0.493 -0.8857343,0.0165 1.2862264,1.60352 1.1529012,-0.93534 H 7.8651331 l 0.016536,-0.55139 h 2.4556649 v 0.55139 H 9.5105107 l -1.661914,1.38648 v 1.13585 h 0.8516275 v 0.46767 H 5.9107304 v -0.46767 h 0.8852172 v -1.13585 l -1.6701822,-2.06293 h -1.052649 z"
+         style="opacity:1;vector-effect:none;fill:#640f6b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:3.86360002;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+      <path
+         id="path4552"
+         d="m 15.482242,287.09427 -2.204973,-0.33408 v 5.36209 l 0.868626,0.15034 z"
+         style="opacity:1;vector-effect:none;fill:#640f6b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:3.86360002;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+      <path
+         id="path4554"
+         d="m 13.043408,293.00761 1.202713,0.13364 -0.100226,1.05237 -1.219417,-0.10023 z"
+         style="opacity:1;vector-effect:none;fill:#640f6b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:3.86360002;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill" />
+    </g>
+  </g>
+</svg>

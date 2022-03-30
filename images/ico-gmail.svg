@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 13.229166 9.5250012"
+   height="36"
+   width="50">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-287.47495)"
+     id="layer1">
+    <g
+       transform="translate(-2.302514,1.7706606)"
+       id="g4508">
+      <g
+         style="stroke-width:0.97181779"
+         transform="matrix(1.0289995,0,0,1.0289995,-0.30550514,-8.4578739)"
+         id="g4617">
+        <rect
+           style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:3.86360002;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+           id="rect4613"
+           width="10.654203"
+           height="9.1541109"
+           x="3.6746747"
+           y="285.90982" />
+        <path
+           style="opacity:1;vector-effect:none;fill:#e33931;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:3.86360002;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+           d="m 2.8950992,286.41772 v 8.10286 c 0.00941,0.24208 0.2384723,0.60227 0.4960938,0.59059 h 0.9685639 v -6.96893 l 4.5829613,3.44903 4.5357138,-3.40179 v 6.92169 h 0.999493 c 0.334428,0.0184 0.550564,-0.21548 0.529114,-0.64193 l -4e-6,-7.98886 c -0.172964,-0.6974 -0.897815,-0.65913 -1.13047,-0.522 l -4.9444857,3.60814 -4.9168094,-3.59919 c -0.4433812,-0.2459 -1.1090934,0.0717 -1.1201707,0.45039 z"
+           id="path4611" />
+      </g>
+    </g>
+  </g>
+</svg>
